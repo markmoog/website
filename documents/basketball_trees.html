@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Win Trees</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+        <link href="../css/styles.css" rel="stylesheet">
+        <script src="https://d3js.org/d3.v4.js"></script>
+    </head>
+    <body>
+        <nav class="navbar bg-inverse navbar-inverse">
+            <div class="container">
+                <a class="navbar-brand" href="../index.html">The Website</a>
+            </div>
+        </nav>
+        <div class="container">
+            <!-- Intro block -->
+            <section class="jumbotron text-center jumbotron-custom">
+                <div class="container">
+                    <h1 class="jumbotron-heading">Basketball Win Trees</h1>
+                    <p class="lead text-muted">Visualizing Wins</p>
+                </div>
+            </section>
+            <div class="container">
+                <!-- Short Description -->
+                <p>
+                    This web page generates a 'win tree' for the team selected below. The selected team is placed in the center of the tree, and all the teams they beat are placed in a ring around the center. Teams that were beaten by teams in the first ring are placed in a second ring further out, and so on and so forth, leading to a tree showing all the teams that the selected team has transitively beaten.
+                </p>
+                <p>
+                    Games from the 2016-2017 season are used to generate the tree.
+                </p>
+                <p>
+                    Based on Vega's <a href='https://vega.github.io/vega/examples/radial-tree-layout/'>radial tree example</a>.
+                </p>
+                <!-- I wish Safari would implement datalists, but since it hasn't I resort to jQuery for compatibility -->
+                <div class="col-lg-6">
+                    <div class="input-group">
+                        <input type="text" id="team_selection" class="form-control" placeholder="Select Team...">
+                        <span class="input-group-btn">
+                            <button class="btn btn-primary" type="button" onclick="generate()">Generate!</button>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="text-center" id="vis">
+            <!-- This div holds the vega visualization (generated in basketball_tree.js) -->
+        </div>
+        <div class="container">
+            <hr>
+        </div>
+        <footer>
+            <ul class="bottom_ul">
+                <li>&copy;2017</li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="legal.html">Terms of Use</a></li>
+            </ul>
+        </footer>
+        <!-- Import Vega 3 and vega-embed from CDN -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/vega/3.0.0/vega.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/vega-embed/3.0.0-beta.20/vega-embed.js"></script>
+        <!-- Bootstrap files from CDN -->
+        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+        <!-- JS for the visualization -->
+        <script type="text/javascript" src="../js/basketball_tree.js"></script>
+    </body>
+</html>

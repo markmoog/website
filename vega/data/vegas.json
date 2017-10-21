@@ -1,0 +1,1171 @@
+[
+  {
+    "closing_spread": -43.5,
+    "fit_win_rate": 0.0000068715820735199,
+    "game_count": 1,
+    "mov": -47,
+    "win_rate": 0
+  },
+  {
+    "closing_spread": -42,
+    "fit_win_rate": 0.000008688956205871179,
+    "game_count": 1,
+    "mov": -68,
+    "win_rate": 0
+  },
+  {
+    "closing_spread": -41.5,
+    "fit_win_rate": 0.00001095881326124148,
+    "game_count": 1,
+    "mov": -50,
+    "win_rate": 0
+  },
+  {
+    "closing_spread": -41,
+    "fit_win_rate": 0.00001378622704500954,
+    "game_count": 1,
+    "mov": -39,
+    "win_rate": 0
+  },
+  {
+    "closing_spread": -40.5,
+    "fit_win_rate": 0.00001729873187422681,
+    "game_count": 1,
+    "mov": -39,
+    "win_rate": 0
+  },
+  {
+    "closing_spread": -39.5,
+    "fit_win_rate": 0.00002165065470505212,
+    "game_count": 1,
+    "mov": -37,
+    "win_rate": 0
+  },
+  {
+    "closing_spread": -39,
+    "fit_win_rate": 0.00002702817599137264,
+    "game_count": 4,
+    "mov": -48.5,
+    "win_rate": 0
+  },
+  {
+    "closing_spread": -38.5,
+    "fit_win_rate": 0.00003365521897263912,
+    "game_count": 3,
+    "mov": -54.33,
+    "win_rate": 0
+  },
+  {
+    "closing_spread": -38,
+    "fit_win_rate": 0.00004180027607370018,
+    "game_count": 1,
+    "mov": -27,
+    "win_rate": 0
+  },
+  {
+    "closing_spread": -37.5,
+    "fit_win_rate": 0.00005178428995511464,
+    "game_count": 3,
+    "mov": -41,
+    "win_rate": 0
+  },
+  {
+    "closing_spread": -37,
+    "fit_win_rate": 0.00006398971522730834,
+    "game_count": 5,
+    "mov": -26.8,
+    "win_rate": 0
+  },
+  {
+    "closing_spread": -36.5,
+    "fit_win_rate": 0.00007887089465602459,
+    "game_count": 3,
+    "mov": -48,
+    "win_rate": 0
+  },
+  {
+    "closing_spread": -36,
+    "fit_win_rate": 0.00009696589049834614,
+    "game_count": 7,
+    "mov": -38.14,
+    "win_rate": 0
+  },
+  {
+    "closing_spread": -35.5,
+    "fit_win_rate": 0.0001189099170310071,
+    "game_count": 7,
+    "mov": -49.29,
+    "win_rate": 0
+  },
+  {
+    "closing_spread": -35,
+    "fit_win_rate": 0.0001454505180329413,
+    "game_count": 5,
+    "mov": -35,
+    "win_rate": 0
+  },
+  {
+    "closing_spread": -34.5,
+    "fit_win_rate": 0.0001774646727273343,
+    "game_count": 11,
+    "mov": -42.64,
+    "win_rate": 0
+  },
+  {
+    "closing_spread": -34,
+    "fit_win_rate": 0.0002159779039569987,
+    "game_count": 14,
+    "mov": -34.14,
+    "win_rate": 0
+  },
+  {
+    "closing_spread": -33.5,
+    "fit_win_rate": 0.0002621856273880563,
+    "game_count": 9,
+    "mov": -30.67,
+    "win_rate": 0
+  },
+  {
+    "closing_spread": -33,
+    "fit_win_rate": 0.0003174768106827819,
+    "game_count": 13,
+    "mov": -31.77,
+    "win_rate": 0
+  },
+  {
+    "closing_spread": -32.5,
+    "fit_win_rate": 0.0003834600897419937,
+    "game_count": 18,
+    "mov": -27.61,
+    "win_rate": 0
+  },
+  {
+    "closing_spread": -32,
+    "fit_win_rate": 0.000461992441199488,
+    "game_count": 20,
+    "mov": -34.8,
+    "win_rate": 0
+  },
+  {
+    "closing_spread": -31.5,
+    "fit_win_rate": 0.000555210489715019,
+    "game_count": 22,
+    "mov": -34.27,
+    "win_rate": 0
+  },
+  {
+    "closing_spread": -31,
+    "fit_win_rate": 0.000665564497601856,
+    "game_count": 16,
+    "mov": -36,
+    "win_rate": 0
+  },
+  {
+    "closing_spread": -30.5,
+    "fit_win_rate": 0.0007958550464100544,
+    "game_count": 22,
+    "mov": -30.64,
+    "win_rate": 0
+  },
+  {
+    "closing_spread": -30,
+    "fit_win_rate": 0.0009492723748369403,
+    "game_count": 27,
+    "mov": -27.3,
+    "win_rate": 0
+  },
+  {
+    "closing_spread": -29.5,
+    "fit_win_rate": 0.001129438209391431,
+    "game_count": 24,
+    "mov": -29.88,
+    "win_rate": 0
+  },
+  {
+    "closing_spread": -29,
+    "fit_win_rate": 0.001340450351458744,
+    "game_count": 32,
+    "mov": -34.34,
+    "win_rate": 0
+  },
+  {
+    "closing_spread": -28.5,
+    "fit_win_rate": 0.001586928845931035,
+    "game_count": 27,
+    "mov": -29.15,
+    "win_rate": 0
+  },
+  {
+    "closing_spread": -28,
+    "fit_win_rate": 0.001874064629057259,
+    "game_count": 41,
+    "mov": -29.15,
+    "win_rate": 0
+  },
+  {
+    "closing_spread": -27.5,
+    "fit_win_rate": 0.002207669438785864,
+    "game_count": 47,
+    "mov": -28.06,
+    "win_rate": 0
+  },
+  {
+    "closing_spread": -27,
+    "fit_win_rate": 0.002594226837263625,
+    "game_count": 49,
+    "mov": -31.02,
+    "win_rate": 0
+  },
+  {
+    "closing_spread": -26.5,
+    "fit_win_rate": 0.00304094373305136,
+    "game_count": 51,
+    "mov": -25.63,
+    "win_rate": 0
+  },
+  {
+    "closing_spread": -26,
+    "fit_win_rate": 0.003555801439428019,
+    "game_count": 81,
+    "mov": -25.53,
+    "win_rate": 0.012
+  },
+  {
+    "closing_spread": -25.5,
+    "fit_win_rate": 0.004147607157295841,
+    "game_count": 68,
+    "mov": -23.75,
+    "win_rate": 0.015
+  },
+  {
+    "closing_spread": -25,
+    "fit_win_rate": 0.004826041198324471,
+    "game_count": 86,
+    "mov": -24.4,
+    "win_rate": 0.012
+  },
+  {
+    "closing_spread": -24.5,
+    "fit_win_rate": 0.005601703721169915,
+    "game_count": 103,
+    "mov": -25.72,
+    "win_rate": 0
+  },
+  {
+    "closing_spread": -24,
+    "fit_win_rate": 0.006486156584242397,
+    "game_count": 107,
+    "mov": -26.14,
+    "win_rate": 0.009000000000000001
+  },
+  {
+    "closing_spread": -23.5,
+    "fit_win_rate": 0.0074919596854503,
+    "game_count": 101,
+    "mov": -23.24,
+    "win_rate": 0.01
+  },
+  {
+    "closing_spread": -23,
+    "fit_win_rate": 0.008632704336145325,
+    "game_count": 122,
+    "mov": -24.26,
+    "win_rate": 0.008
+  },
+  {
+    "closing_spread": -22.5,
+    "fit_win_rate": 0.009923033209494392,
+    "game_count": 124,
+    "mov": -23.3,
+    "win_rate": 0
+  },
+  {
+    "closing_spread": -22,
+    "fit_win_rate": 0.01137865685410583,
+    "game_count": 157,
+    "mov": -21.2,
+    "win_rate": 0.032
+  },
+  {
+    "closing_spread": -21.5,
+    "fit_win_rate": 0.01301635597746709,
+    "game_count": 148,
+    "mov": -22.52,
+    "win_rate": 0.014
+  },
+  {
+    "closing_spread": -21,
+    "fit_win_rate": 0.01485397905110153,
+    "game_count": 197,
+    "mov": -20.61,
+    "win_rate": 0.03
+  },
+  {
+    "closing_spread": -20.5,
+    "fit_win_rate": 0.01691041517830599,
+    "game_count": 176,
+    "mov": -20.27,
+    "win_rate": 0.023
+  },
+  {
+    "closing_spread": -20,
+    "fit_win_rate": 0.01920556115249838,
+    "game_count": 199,
+    "mov": -20.7,
+    "win_rate": 0.015
+  },
+  {
+    "closing_spread": -19.5,
+    "fit_win_rate": 0.02176027793960694,
+    "game_count": 223,
+    "mov": -19.87,
+    "win_rate": 0.027
+  },
+  {
+    "closing_spread": -19,
+    "fit_win_rate": 0.02459631351271041,
+    "game_count": 228,
+    "mov": -19.91,
+    "win_rate": 0.013
+  },
+  {
+    "closing_spread": -18.5,
+    "fit_win_rate": 0.02773622036426199,
+    "game_count": 287,
+    "mov": -20.29,
+    "win_rate": 0.024
+  },
+  {
+    "closing_spread": -18,
+    "fit_win_rate": 0.03120326498784842,
+    "game_count": 324,
+    "mov": -18.3,
+    "win_rate": 0.031
+  },
+  {
+    "closing_spread": -17.5,
+    "fit_win_rate": 0.0350212825569699,
+    "game_count": 358,
+    "mov": -17.56,
+    "win_rate": 0.034
+  },
+  {
+    "closing_spread": -17,
+    "fit_win_rate": 0.0392145640940566,
+    "game_count": 395,
+    "mov": -15.98,
+    "win_rate": 0.05599999999999999
+  },
+  {
+    "closing_spread": -16.5,
+    "fit_win_rate": 0.04380766419558246,
+    "game_count": 403,
+    "mov": -17.15,
+    "win_rate": 0.055
+  },
+  {
+    "closing_spread": -16,
+    "fit_win_rate": 0.04882524723732579,
+    "game_count": 475,
+    "mov": -16.73,
+    "win_rate": 0.025
+  },
+  {
+    "closing_spread": -15.5,
+    "fit_win_rate": 0.05429188704403393,
+    "game_count": 474,
+    "mov": -15.52,
+    "win_rate": 0.034
+  },
+  {
+    "closing_spread": -15,
+    "fit_win_rate": 0.06023184859698266,
+    "game_count": 589,
+    "mov": -15.47,
+    "win_rate": 0.061
+  },
+  {
+    "closing_spread": -14.5,
+    "fit_win_rate": 0.06666882269818036,
+    "game_count": 641,
+    "mov": -14.85,
+    "win_rate": 0.058
+  },
+  {
+    "closing_spread": -14,
+    "fit_win_rate": 0.07362575437082564,
+    "game_count": 733,
+    "mov": -14.09,
+    "win_rate": 0.083
+  },
+  {
+    "closing_spread": -13.5,
+    "fit_win_rate": 0.08112452919905294,
+    "game_count": 757,
+    "mov": -14.2,
+    "win_rate": 0.079
+  },
+  {
+    "closing_spread": -13,
+    "fit_win_rate": 0.08918573222955445,
+    "game_count": 863,
+    "mov": -12.97,
+    "win_rate": 0.102
+  },
+  {
+    "closing_spread": -12.5,
+    "fit_win_rate": 0.09782834936107793,
+    "game_count": 875,
+    "mov": -12.25,
+    "win_rate": 0.118
+  },
+  {
+    "closing_spread": -12,
+    "fit_win_rate": 0.1070695403309695,
+    "game_count": 948,
+    "mov": -11.44,
+    "win_rate": 0.127
+  },
+  {
+    "closing_spread": -11.5,
+    "fit_win_rate": 0.1169243360135867,
+    "game_count": 932,
+    "mov": -11.57,
+    "win_rate": 0.124
+  },
+  {
+    "closing_spread": -11,
+    "fit_win_rate": 0.1274053443071673,
+    "game_count": 1057,
+    "mov": -11.23,
+    "win_rate": 0.122
+  },
+  {
+    "closing_spread": -10.5,
+    "fit_win_rate": 0.1385225551460487,
+    "game_count": 1080,
+    "mov": -10.5,
+    "win_rate": 0.15
+  },
+  {
+    "closing_spread": -10,
+    "fit_win_rate": 0.1502830407856853,
+    "game_count": 1253,
+    "mov": -10.03,
+    "win_rate": 0.158
+  },
+  {
+    "closing_spread": -9.5,
+    "fit_win_rate": 0.1626907476996954,
+    "game_count": 1222,
+    "mov": -9.59,
+    "win_rate": 0.149
+  },
+  {
+    "closing_spread": -9,
+    "fit_win_rate": 0.1757462624746218,
+    "game_count": 1377,
+    "mov": -8.84,
+    "win_rate": 0.185
+  },
+  {
+    "closing_spread": -8.5,
+    "fit_win_rate": 0.1894466710534213,
+    "game_count": 1490,
+    "mov": -8.53,
+    "win_rate": 0.184
+  },
+  {
+    "closing_spread": -8,
+    "fit_win_rate": 0.2037853683837184,
+    "game_count": 1645,
+    "mov": -7.73,
+    "win_rate": 0.221
+  },
+  {
+    "closing_spread": -7.5,
+    "fit_win_rate": 0.2187519511416338,
+    "game_count": 1711,
+    "mov": -7.42,
+    "win_rate": 0.222
+  },
+  {
+    "closing_spread": -7,
+    "fit_win_rate": 0.2343321159815595,
+    "game_count": 1737,
+    "mov": -6.65,
+    "win_rate": 0.242
+  },
+  {
+    "closing_spread": -6.5,
+    "fit_win_rate": 0.2505076388420939,
+    "game_count": 1903,
+    "mov": -6.58,
+    "win_rate": 0.266
+  },
+  {
+    "closing_spread": -6,
+    "fit_win_rate": 0.2672563456891714,
+    "game_count": 1927,
+    "mov": -5.41,
+    "win_rate": 0.295
+  },
+  {
+    "closing_spread": -5.5,
+    "fit_win_rate": 0.2845521563450138,
+    "game_count": 2009,
+    "mov": -5.16,
+    "win_rate": 0.294
+  },
+  {
+    "closing_spread": -5,
+    "fit_win_rate": 0.3023651645878463,
+    "game_count": 2039,
+    "mov": -4.82,
+    "win_rate": 0.322
+  },
+  {
+    "closing_spread": -4.5,
+    "fit_win_rate": 0.3206617597381908,
+    "game_count": 2175,
+    "mov": -4.07,
+    "win_rate": 0.338
+  },
+  {
+    "closing_spread": -4,
+    "fit_win_rate": 0.3394047988694564,
+    "game_count": 2309,
+    "mov": -3.35,
+    "win_rate": 0.364
+  },
+  {
+    "closing_spread": -3.5,
+    "fit_win_rate": 0.3585538137931064,
+    "game_count": 2289,
+    "mov": -3.47,
+    "win_rate": 0.374
+  },
+  {
+    "closing_spread": -3,
+    "fit_win_rate": 0.3780652644998529,
+    "game_count": 2396,
+    "mov": -2.87,
+    "win_rate": 0.375
+  },
+  {
+    "closing_spread": -2.5,
+    "fit_win_rate": 0.3978928291747795,
+    "game_count": 2326,
+    "mov": -2.01,
+    "win_rate": 0.424
+  },
+  {
+    "closing_spread": -2,
+    "fit_win_rate": 0.4179877311332107,
+    "game_count": 2434,
+    "mov": -1.14,
+    "win_rate": 0.447
+  },
+  {
+    "closing_spread": -1.5,
+    "fit_win_rate": 0.4382990958376136,
+    "game_count": 2050,
+    "mov": -0.82,
+    "win_rate": 0.475
+  },
+  {
+    "closing_spread": -1,
+    "fit_win_rate": 0.4587743363707514,
+    "game_count": 2385,
+    "mov": -0.55,
+    "win_rate": 0.476
+  },
+  {
+    "closing_spread": 0,
+    "fit_win_rate": 0.5000000000000003,
+    "game_count": 824,
+    "mov": 0,
+    "win_rate": 0.5
+  },
+  {
+    "closing_spread": 1,
+    "fit_win_rate": 0.541225663629249,
+    "game_count": 2385,
+    "mov": 0.55,
+    "win_rate": 0.524
+  },
+  {
+    "closing_spread": 1.5,
+    "fit_win_rate": 0.5617009041623867,
+    "game_count": 2050,
+    "mov": 0.82,
+    "win_rate": 0.525
+  },
+  {
+    "closing_spread": 2,
+    "fit_win_rate": 0.5820122688667895,
+    "game_count": 2434,
+    "mov": 1.14,
+    "win_rate": 0.5529999999999999
+  },
+  {
+    "closing_spread": 2.5,
+    "fit_win_rate": 0.6021071708252208,
+    "game_count": 2326,
+    "mov": 2.01,
+    "win_rate": 0.5760000000000001
+  },
+  {
+    "closing_spread": 3,
+    "fit_win_rate": 0.6219347355001473,
+    "game_count": 2396,
+    "mov": 2.87,
+    "win_rate": 0.625
+  },
+  {
+    "closing_spread": 3.5,
+    "fit_win_rate": 0.6414461862068942,
+    "game_count": 2289,
+    "mov": 3.47,
+    "win_rate": 0.626
+  },
+  {
+    "closing_spread": 4,
+    "fit_win_rate": 0.6605952011305438,
+    "game_count": 2309,
+    "mov": 3.35,
+    "win_rate": 0.636
+  },
+  {
+    "closing_spread": 4.5,
+    "fit_win_rate": 0.6793382402618094,
+    "game_count": 2175,
+    "mov": 4.07,
+    "win_rate": 0.662
+  },
+  {
+    "closing_spread": 5,
+    "fit_win_rate": 0.6976348354121539,
+    "game_count": 2039,
+    "mov": 4.82,
+    "win_rate": 0.6779999999999999
+  },
+  {
+    "closing_spread": 5.5,
+    "fit_win_rate": 0.7154478436549865,
+    "game_count": 2009,
+    "mov": 5.16,
+    "win_rate": 0.706
+  },
+  {
+    "closing_spread": 6,
+    "fit_win_rate": 0.732743654310829,
+    "game_count": 1927,
+    "mov": 5.41,
+    "win_rate": 0.705
+  },
+  {
+    "closing_spread": 6.5,
+    "fit_win_rate": 0.7494923611579064,
+    "game_count": 1903,
+    "mov": 6.58,
+    "win_rate": 0.7340000000000001
+  },
+  {
+    "closing_spread": 7,
+    "fit_win_rate": 0.7656678840184407,
+    "game_count": 1737,
+    "mov": 6.65,
+    "win_rate": 0.758
+  },
+  {
+    "closing_spread": 7.5,
+    "fit_win_rate": 0.7812480488583664,
+    "game_count": 1711,
+    "mov": 7.42,
+    "win_rate": 0.778
+  },
+  {
+    "closing_spread": 8,
+    "fit_win_rate": 0.7962146316162819,
+    "game_count": 1645,
+    "mov": 7.73,
+    "win_rate": 0.779
+  },
+  {
+    "closing_spread": 8.5,
+    "fit_win_rate": 0.8105533289465787,
+    "game_count": 1490,
+    "mov": 8.53,
+    "win_rate": 0.816
+  },
+  {
+    "closing_spread": 9,
+    "fit_win_rate": 0.8242537375253783,
+    "game_count": 1377,
+    "mov": 8.84,
+    "win_rate": 0.815
+  },
+  {
+    "closing_spread": 9.5,
+    "fit_win_rate": 0.837309252300305,
+    "game_count": 1222,
+    "mov": 9.59,
+    "win_rate": 0.851
+  },
+  {
+    "closing_spread": 10,
+    "fit_win_rate": 0.8497169592143149,
+    "game_count": 1253,
+    "mov": 10.03,
+    "win_rate": 0.8420000000000001
+  },
+  {
+    "closing_spread": 10.5,
+    "fit_win_rate": 0.8614774448539515,
+    "game_count": 1080,
+    "mov": 10.5,
+    "win_rate": 0.85
+  },
+  {
+    "closing_spread": 11,
+    "fit_win_rate": 0.8725946556928328,
+    "game_count": 1057,
+    "mov": 11.23,
+    "win_rate": 0.878
+  },
+  {
+    "closing_spread": 11.5,
+    "fit_win_rate": 0.8830756639864135,
+    "game_count": 932,
+    "mov": 11.57,
+    "win_rate": 0.8759999999999999
+  },
+  {
+    "closing_spread": 12,
+    "fit_win_rate": 0.8929304596690305,
+    "game_count": 948,
+    "mov": 11.44,
+    "win_rate": 0.873
+  },
+  {
+    "closing_spread": 12.5,
+    "fit_win_rate": 0.9021716506389224,
+    "game_count": 875,
+    "mov": 12.25,
+    "win_rate": 0.882
+  },
+  {
+    "closing_spread": 13,
+    "fit_win_rate": 0.9108142677704458,
+    "game_count": 863,
+    "mov": 12.97,
+    "win_rate": 0.898
+  },
+  {
+    "closing_spread": 13.5,
+    "fit_win_rate": 0.9188754708009472,
+    "game_count": 757,
+    "mov": 14.2,
+    "win_rate": 0.9209999999999999
+  },
+  {
+    "closing_spread": 14,
+    "fit_win_rate": 0.9263742456291745,
+    "game_count": 733,
+    "mov": 14.09,
+    "win_rate": 0.917
+  },
+  {
+    "closing_spread": 14.5,
+    "fit_win_rate": 0.9333311773018198,
+    "game_count": 641,
+    "mov": 14.85,
+    "win_rate": 0.9420000000000001
+  },
+  {
+    "closing_spread": 15,
+    "fit_win_rate": 0.9397681514030174,
+    "game_count": 589,
+    "mov": 15.47,
+    "win_rate": 0.9390000000000001
+  },
+  {
+    "closing_spread": 15.5,
+    "fit_win_rate": 0.9457081129559661,
+    "game_count": 474,
+    "mov": 15.52,
+    "win_rate": 0.966
+  },
+  {
+    "closing_spread": 16,
+    "fit_win_rate": 0.9511747527626744,
+    "game_count": 475,
+    "mov": 16.73,
+    "win_rate": 0.975
+  },
+  {
+    "closing_spread": 16.5,
+    "fit_win_rate": 0.9561923358044176,
+    "game_count": 403,
+    "mov": 17.15,
+    "win_rate": 0.945
+  },
+  {
+    "closing_spread": 17,
+    "fit_win_rate": 0.9607854359059435,
+    "game_count": 395,
+    "mov": 15.98,
+    "win_rate": 0.9440000000000001
+  },
+  {
+    "closing_spread": 17.5,
+    "fit_win_rate": 0.9649787174430302,
+    "game_count": 358,
+    "mov": 17.56,
+    "win_rate": 0.966
+  },
+  {
+    "closing_spread": 18,
+    "fit_win_rate": 0.9687967350121516,
+    "game_count": 324,
+    "mov": 18.3,
+    "win_rate": 0.9690000000000001
+  },
+  {
+    "closing_spread": 18.5,
+    "fit_win_rate": 0.9722637796357381,
+    "game_count": 287,
+    "mov": 20.29,
+    "win_rate": 0.976
+  },
+  {
+    "closing_spread": 19,
+    "fit_win_rate": 0.9754036864872897,
+    "game_count": 228,
+    "mov": 19.91,
+    "win_rate": 0.987
+  },
+  {
+    "closing_spread": 19.5,
+    "fit_win_rate": 0.9782397220603931,
+    "game_count": 223,
+    "mov": 19.87,
+    "win_rate": 0.973
+  },
+  {
+    "closing_spread": 20,
+    "fit_win_rate": 0.9807944388475016,
+    "game_count": 199,
+    "mov": 20.7,
+    "win_rate": 0.985
+  },
+  {
+    "closing_spread": 20.5,
+    "fit_win_rate": 0.9830895848216941,
+    "game_count": 176,
+    "mov": 20.27,
+    "win_rate": 0.977
+  },
+  {
+    "closing_spread": 21,
+    "fit_win_rate": 0.9851460209488985,
+    "game_count": 197,
+    "mov": 20.61,
+    "win_rate": 0.97
+  },
+  {
+    "closing_spread": 21.5,
+    "fit_win_rate": 0.986983644022533,
+    "game_count": 148,
+    "mov": 22.52,
+    "win_rate": 0.986
+  },
+  {
+    "closing_spread": 22,
+    "fit_win_rate": 0.9886213431458942,
+    "game_count": 157,
+    "mov": 21.2,
+    "win_rate": 0.968
+  },
+  {
+    "closing_spread": 22.5,
+    "fit_win_rate": 0.9900769667905056,
+    "game_count": 124,
+    "mov": 23.3,
+    "win_rate": 1
+  },
+  {
+    "closing_spread": 23,
+    "fit_win_rate": 0.9913672956638547,
+    "game_count": 122,
+    "mov": 24.26,
+    "win_rate": 0.992
+  },
+  {
+    "closing_spread": 23.5,
+    "fit_win_rate": 0.9925080403145498,
+    "game_count": 101,
+    "mov": 23.24,
+    "win_rate": 0.99
+  },
+  {
+    "closing_spread": 24,
+    "fit_win_rate": 0.9935138434157577,
+    "game_count": 107,
+    "mov": 26.14,
+    "win_rate": 0.991
+  },
+  {
+    "closing_spread": 24.5,
+    "fit_win_rate": 0.99439829627883,
+    "game_count": 103,
+    "mov": 25.72,
+    "win_rate": 1
+  },
+  {
+    "closing_spread": 25,
+    "fit_win_rate": 0.9951739588016756,
+    "game_count": 86,
+    "mov": 24.4,
+    "win_rate": 0.988
+  },
+  {
+    "closing_spread": 25.5,
+    "fit_win_rate": 0.9958523928427041,
+    "game_count": 68,
+    "mov": 23.75,
+    "win_rate": 0.985
+  },
+  {
+    "closing_spread": 26,
+    "fit_win_rate": 0.996444198560572,
+    "game_count": 81,
+    "mov": 25.53,
+    "win_rate": 0.988
+  },
+  {
+    "closing_spread": 26.5,
+    "fit_win_rate": 0.9969590562669486,
+    "game_count": 51,
+    "mov": 25.63,
+    "win_rate": 1
+  },
+  {
+    "closing_spread": 27,
+    "fit_win_rate": 0.9974057731627364,
+    "game_count": 49,
+    "mov": 31.02,
+    "win_rate": 1
+  },
+  {
+    "closing_spread": 27.5,
+    "fit_win_rate": 0.9977923305612142,
+    "game_count": 47,
+    "mov": 28.06,
+    "win_rate": 1
+  },
+  {
+    "closing_spread": 28,
+    "fit_win_rate": 0.9981259353709427,
+    "game_count": 41,
+    "mov": 29.15,
+    "win_rate": 1
+  },
+  {
+    "closing_spread": 28.5,
+    "fit_win_rate": 0.998413071154069,
+    "game_count": 27,
+    "mov": 29.15,
+    "win_rate": 1
+  },
+  {
+    "closing_spread": 29,
+    "fit_win_rate": 0.9986595496485413,
+    "game_count": 32,
+    "mov": 34.34,
+    "win_rate": 1
+  },
+  {
+    "closing_spread": 29.5,
+    "fit_win_rate": 0.9988705617906086,
+    "game_count": 24,
+    "mov": 29.88,
+    "win_rate": 1
+  },
+  {
+    "closing_spread": 30,
+    "fit_win_rate": 0.999050727625163,
+    "game_count": 27,
+    "mov": 27.3,
+    "win_rate": 1
+  },
+  {
+    "closing_spread": 30.5,
+    "fit_win_rate": 0.99920414495359,
+    "game_count": 22,
+    "mov": 30.64,
+    "win_rate": 1
+  },
+  {
+    "closing_spread": 31,
+    "fit_win_rate": 0.9993344355023981,
+    "game_count": 16,
+    "mov": 36,
+    "win_rate": 1
+  },
+  {
+    "closing_spread": 31.5,
+    "fit_win_rate": 0.9994447895102849,
+    "game_count": 22,
+    "mov": 34.27,
+    "win_rate": 1
+  },
+  {
+    "closing_spread": 32,
+    "fit_win_rate": 0.9995380075588005,
+    "game_count": 20,
+    "mov": 34.8,
+    "win_rate": 1
+  },
+  {
+    "closing_spread": 32.5,
+    "fit_win_rate": 0.999616539910258,
+    "game_count": 18,
+    "mov": 27.61,
+    "win_rate": 1
+  },
+  {
+    "closing_spread": 33,
+    "fit_win_rate": 0.9996825231893172,
+    "game_count": 13,
+    "mov": 31.77,
+    "win_rate": 1
+  },
+  {
+    "closing_spread": 33.5,
+    "fit_win_rate": 0.9997378143726119,
+    "game_count": 9,
+    "mov": 30.67,
+    "win_rate": 1
+  },
+  {
+    "closing_spread": 34,
+    "fit_win_rate": 0.999784022096043,
+    "game_count": 14,
+    "mov": 34.14,
+    "win_rate": 1
+  },
+  {
+    "closing_spread": 34.5,
+    "fit_win_rate": 0.9998225353272727,
+    "game_count": 11,
+    "mov": 42.64,
+    "win_rate": 1
+  },
+  {
+    "closing_spread": 35,
+    "fit_win_rate": 0.9998545494819671,
+    "game_count": 5,
+    "mov": 35,
+    "win_rate": 1
+  },
+  {
+    "closing_spread": 35.5,
+    "fit_win_rate": 0.999881090082969,
+    "game_count": 7,
+    "mov": 49.29,
+    "win_rate": 1
+  },
+  {
+    "closing_spread": 36,
+    "fit_win_rate": 0.9999030341095017,
+    "game_count": 7,
+    "mov": 38.14,
+    "win_rate": 1
+  },
+  {
+    "closing_spread": 36.5,
+    "fit_win_rate": 0.999921129105344,
+    "game_count": 3,
+    "mov": 48,
+    "win_rate": 1
+  },
+  {
+    "closing_spread": 37,
+    "fit_win_rate": 0.9999360102847727,
+    "game_count": 5,
+    "mov": 26.8,
+    "win_rate": 1
+  },
+  {
+    "closing_spread": 37.5,
+    "fit_win_rate": 0.9999482157100449,
+    "game_count": 3,
+    "mov": 41,
+    "win_rate": 1
+  },
+  {
+    "closing_spread": 38,
+    "fit_win_rate": 0.9999581997239263,
+    "game_count": 1,
+    "mov": 27,
+    "win_rate": 1
+  },
+  {
+    "closing_spread": 38.5,
+    "fit_win_rate": 0.9999663447810274,
+    "game_count": 3,
+    "mov": 54.33,
+    "win_rate": 1
+  },
+  {
+    "closing_spread": 39,
+    "fit_win_rate": 0.9999729718240087,
+    "game_count": 4,
+    "mov": 48.5,
+    "win_rate": 1
+  },
+  {
+    "closing_spread": 39.5,
+    "fit_win_rate": 0.999978349345295,
+    "game_count": 1,
+    "mov": 37,
+    "win_rate": 1
+  },
+  {
+    "closing_spread": 40.5,
+    "fit_win_rate": 0.9999827012681257,
+    "game_count": 1,
+    "mov": 39,
+    "win_rate": 1
+  },
+  {
+    "closing_spread": 41,
+    "fit_win_rate": 0.9999862137729549,
+    "game_count": 1,
+    "mov": 39,
+    "win_rate": 1
+  },
+  {
+    "closing_spread": 41.5,
+    "fit_win_rate": 0.9999890411867387,
+    "game_count": 1,
+    "mov": 50,
+    "win_rate": 1
+  },
+  {
+    "closing_spread": 42,
+    "fit_win_rate": 0.9999913110437941,
+    "game_count": 1,
+    "mov": 68,
+    "win_rate": 1
+  },
+  {
+    "closing_spread": 43.5,
+    "fit_win_rate": 0.9999931284179264,
+    "game_count": 1,
+    "mov": 47,
+    "win_rate": 1
+  }
+]
