@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Graph Ratings</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+        <link href="../css/styles.css" rel="stylesheet">
+        <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+        </script>
+        <script type="text/javascript" async
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML">
+        </script>
+        <!-- Import Vega 3 -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/vega/3.0.7/vega.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/vega-embed/3.0.0-rc6/vega-embed.min.js"></script>
+    </head>
+    <body>
+        <!-- Navbar -->
+        <nav class="navbar bg-inverse navbar-toggleable-sm navbar-inverse">
+            <div class="container">
+                <a class="navbar-brand" href="../index.html">The Website</a>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Ratings
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <a class="dropdown-item" href="ncaabb_ratings.html">College Basketball</a>
+                                <a class="dropdown-item disabled" href="#">College Football</a>
+                                <a class="dropdown-item disabled" href="#">NBA</a>
+                                <a class="dropdown-item disabled" href="#">NFL</a>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Visualizations
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <a class="dropdown-item" href="basketball_trees.html">College Basketball Win Trees</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="true" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+        </nav>
+        <div class="container">
+            <!-- Intro block -->
+            <section class="jumbotron text-center">
+                <div class="container">
+                    <h1 class="jumbotron-heading">A Brief Description of Graph Rating Methodology</h1>
+                    <p class="text-muted">
+                        A more in depth description will be available eventually. Until then, this dense description will act as a placeholder.
+                    </p>
+                </div>
+            </section>
+            <p>
+                First, a weighted directed graph of the league is created. Each node in the graph corresponds to a team in the league. Teams that have played each other are connected by an edge with a weight equal to the teams' head-to-head point differential. Note, if there is an edge pointing from team A to team B with weight w, then there is also an edge pointing from team B to team A with weight -w.
+            </p>
+            <p>
+                Next, distances between each pair of teams are calculated using the graph using the average path weight of all paths of length s connecting two teams. The path length s is chosen so that all teams are connected by at least one path, but computation time increases exponentially with s, which introduces a practical limit on its upper bound.
+            </p>
+            <p>
+                Finally, the distances between every pair of teams are used to generate a rating for each team. Multiple options have been considered to use these distances to generate rating such as taking an average distance from a reference for each team, principle component analysis, and multidimensional scaling. Currently something similar to an average is used, and the expected margin of victory between two teams playing head to head can be estimated as the difference between the teams' ratings.
+            </p>
+            <p>
+                The code for generating the graph and calculating the distances between teams can be seen <a href="https://github.com/markmoog/basketball_graph/blob/master/basketball_graph.nim">here</a>
+            </p>
+        </div>
+        <hr>
+    <footer>
+        <ul class="bottom_ul">
+            <li>&copy;2017</li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="legal.html">Terms of Use</a></li>
+        </ul>
+    </footer>
+    <!-- Bootstrap files from CDN -->
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+    </body>
+</html>
+

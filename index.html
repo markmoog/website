@@ -8,10 +8,37 @@
         <link href="css/styles.css" rel="stylesheet">
     </head>
     <body>
-        <nav class="navbar bg-inverse navbar-inverse">
+        <!-- Navbar -->
+        <nav class="navbar bg-inverse navbar-toggleable-sm navbar-inverse">
             <div class="container">
-                <a class="navbar-brand" href="index.html">The Website</a>
+                <a class="navbar-brand" href="#">The Website</a>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Ratings
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <a class="dropdown-item" href="documents/ncaabb_ratings.html">College Basketball</a>
+                                <a class="dropdown-item disabled" href="#">College Football</a>
+                                <a class="dropdown-item disabled" href="#">NBA</a>
+                                <a class="dropdown-item disabled" href="#">NFL</a>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Visualizations
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <a class="dropdown-item" href="documents/basketball_trees.html">College Basketball Win Trees</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
             </div>
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="true" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
         </nav>
         <div class="container">
             <!-- Intro block -->
@@ -25,27 +52,27 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-4">
-                        <h3>Basketball Win Trees</h3>
+                        <h3>Quantifying Randomness in Sports</h3>
                         <p>
-                            An amusing visualization that generates 'win trees' for college basketball teams.
+                            In sports the outcome of the game is not the same every time teams play, there is some inherent randomness in the game. This randomness puts an upper limit on the accuracy of predictions, and understanding it is important for evaluating sport models.
                         </p>
                         <p>
-                            <a class="btn btn-primary" href="documents/basketball_trees.html" role="button">Read</a>
+                            <a class="btn btn-primary disabled" href="documents/quantifying_randomness.html" role="button">Coming Soon</a>
                         </p>
                     </div>
                     <div class="col-lg-4">
-                        <h3>Developing a Basketball Model</h3>
+                        <h3>Graph Ratings Methodology</h3>
                         <p>
-                            There are many approaches to rating teams and predicting the outcome of games in sports. Here I present an empirical model for predicting the outcome of college basketball games based on transitive outcomes between teams.
+                            Graphs are a mathematical objects which describe a set of things and the relationships between them. Using a graph, distances between teams are determined which are then used to find create team ratings.
                         </p>
                         <p>
-                            <a class="btn btn-primary disabled" href="#" role="button">Coming Soon</a>
+                            <a class="btn btn-primary" href="documents/graph_ratings.html" role="button">Read</a>
                         </p>
                     </div>
                     <div class="col-lg-4">
                         <h3>Simulating Basketball Games</h3>
                         <p>
-                            A neural network is trained to simulate basketball games play by play. What can be learned from a simulation?
+                            A recurrent neural network is trained to simulate basketball games play by play. By observing how changes in team features affect the simulated game outcome, the impact of incremental improvement in various aspects of a team can be quantified.
                         </p>
                         <p>
                             <a class="btn btn-primary disabled" href="#" role="button">Coming Soon</a>

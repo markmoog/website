@@ -1,12 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>Win Trees</title>
+        <title>Graph Ratings</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
         <link href="../css/styles.css" rel="stylesheet">
-        <script src="https://d3js.org/d3.v4.js"></script>
+        <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+        </script>
+        <script type="text/javascript" async
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML">
+        </script>
+        <!-- Import Vega 3 -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/vega/3.0.7/vega.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/vega-embed/3.0.0-rc6/vega-embed.min.js"></script>
+        <!-- <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script> -->
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/4.1.2/papaparse.js"></script>
     </head>
     <body>
         <!-- Navbar -->
@@ -43,39 +54,47 @@
         </nav>
         <div class="container">
             <!-- Intro block -->
-            <section class="jumbotron text-center jumbotron-custom">
+            <section class="jumbotron text-center">
                 <div class="container">
-                    <h1 class="jumbotron-heading">Basketball Win Trees</h1>
+                    <h1 class="jumbotron-heading">College Basketball Ratings</h1>
+                    <p class="text-muted">
+                        Rating methodology can be found <a href="graph_ratings.html">here</a>
+                    </p>
                 </div>
             </section>
-            <div class="container">
-                <!-- Short Description -->
-                <p>
-                    This web page generates a 'win tree' for the team selected below. The selected team is placed in the center of the tree, and all the teams they beat are placed in a ring around the center. Teams that were beaten by teams in the first ring are placed in a second ring further out, and so on and so forth, leading to a tree showing all the teams that the selected team has transitively beaten.
-                </p>
-                <p>
-                    Games from the 2016-2017 season are used to generate the tree.
-                </p>
-                <p>
-                    Based on Vega's <a href='https://vega.github.io/vega/examples/radial-tree-layout/'>radial tree example</a>.
-                </p>
-                <!-- I wish Safari would implement datalists, but since it hasn't I resort to jQuery for compatibility -->
-                <div class="col-lg-6">
-                    <div class="input-group">
-                        <input type="text" id="team_selection" class="form-control" placeholder="Select Team...">
-                        <span class="input-group-btn">
-                            <button class="btn btn-primary" type="button" onclick="generate()">Generate!</button>
-                        </span>
-                    </div>
-                </div>
+            <div class="vis">
+                <!-- ratings accuracy plot -->
+            </div>
+            <div class="text-center" style="padding-bottom:20px">
+                <h4>2016-2017 Ratings</h4>
+            </div>
+            <div class="ratings">
+                <!-- ratings table goes here -->
+                <script>
+                    function create_table(data) {
+                        var table = $('<table><tr><th></th><th>School</th><th>Rating</th></tr></table>')
+                        $(data).each(function (i, row_data) {
+                            var row = $('<tr></tr>')
+                            row.append('<td>' + (i+1) + '</td>')
+                            $(row_data).each(function (j, cell_data) {
+                                row.append($('<td>' + cell_data + '</td>'))
+                            })
+                            table.append(row)
+                        })
+                        return table
+                    }
+
+                    $.ajax({
+                        type: "GET",
+                        url: "../ratings/ratings.csv",
+                        success: function (data) {
+                            $('.ratings').append(create_table(Papa.parse(data).data))
+                        }
+                    })
+                </script>
             </div>
         </div>
-        <div class="text-center" id="vis">
-            <!-- This div holds the vega visualization (generated in basketball_tree.js) -->
-        </div>
-        <div class="container">
-            <hr>
-        </div>
+        <hr>
         <footer>
             <ul class="bottom_ul">
                 <li>&copy;2017</li>
@@ -84,16 +103,8 @@
                 <li><a href="legal.html">Terms of Use</a></li>
             </ul>
         </footer>
-        <!-- Import Vega 3 and vega-embed from CDN -->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/vega/3.0.0/vega.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/vega-embed/3.0.0-beta.20/vega-embed.js"></script>
         <!-- Bootstrap files from CDN -->
-        <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
-        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-        <!-- JS for the visualization -->
-        <script type="text/javascript" src="../js/basketball_tree.js"></script>
     </body>
 </html>
