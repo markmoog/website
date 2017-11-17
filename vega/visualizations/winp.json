@@ -1,0 +1,121 @@
+{
+  "$schema": "https://vega.github.io/schema/vega/v3.0.json",
+  "padding": 5,
+  "autosize": "pad",
+  "data": [
+    {
+      "name": "s",
+      "url": "../../vega/data/winp.csv",
+      "format": {
+        "type": "csv",
+        "parse": {
+            "date": "date",
+            "winp": "number"
+        }
+      },
+      "transform": [
+        {
+          "type": "formula",
+          "as": "correctp",
+          "expr": "100.0 * datum.winp"
+        }
+      ]
+    }
+  ],
+  "scales": [
+    {
+      "name": "x",
+      "type": "time",
+      "domain": {
+        "data": "s",
+        "field": "date"
+      },
+      "range": "width"
+    },
+    {
+      "name": "y",
+      "type": "linear",
+      "domain": {
+        "data": "s",
+        "field": "correctp"
+      },
+      "zero": false,
+      "range": "height"
+    }
+  ],
+  "axes": [
+    {
+      "scale": "x",
+      "grid": true,
+      "orient": "bottom",
+      "tickCount": 5,
+      "title": "Date",
+      "encode":{
+        "labels":{
+          "enter":{
+            "fontSize": {"value": 16}
+          }
+        },
+        "title": {
+          "enter": {
+            "fontSize": {"value": 16}
+          }
+        }
+      }
+    },
+    {
+      "scale": "y",
+      "format": ".1f",
+      "grid": true,
+      "domain": false,
+      "orient": "left",
+      "tickCount": 5,
+      "title": "% Correct",
+      "encode":{
+        "labels":{
+          "enter":{
+            "fontSize": {"value": 16}
+          }
+        },
+        "title": {
+          "enter": {
+            "fontSize": {"value": 16}
+          }
+        }
+      }
+    }
+  ],
+  "marks": [
+    {
+      "name": "marks",
+      "type": "symbol",
+      "from": {
+        "data": "s"
+      },
+      "encode": {
+        "enter": {
+          "x": {
+            "scale": "x",
+            "field": "date"
+          },
+          "y": {
+            "scale": "y",
+            "field": "correctp"
+          },
+          "size": {
+            "value": 100
+          },
+          "shape": {
+            "value": "circle"
+          },
+          "opacity": {
+            "value": 0.5
+          },
+          "fill": {
+            "value": "#4682B4"
+          }
+        }
+      }
+    }
+  ]
+}

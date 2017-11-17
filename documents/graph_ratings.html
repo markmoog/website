@@ -24,7 +24,7 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav mr-auto">
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" role="button">
                                 Ratings
                             </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
@@ -35,7 +35,7 @@
                             </div>
                         </li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" role="button">
                                 Visualizations
                             </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
@@ -66,7 +66,7 @@
                 Next, distances between each pair of teams are calculated using the graph using the average path weight of all paths of length s connecting two teams. The path length s is chosen so that all teams are connected by at least one path, but computation time increases exponentially with s, which introduces a practical limit on its upper bound.
             </p>
             <p>
-                Finally, the distances between every pair of teams are used to generate a rating for each team. Multiple options have been considered to use these distances to generate rating such as taking an average distance from a reference for each team, principle component analysis, and multidimensional scaling. Currently something similar to an average is used, and the expected margin of victory between two teams playing head to head can be estimated as the difference between the teams' ratings.
+                Finally, the distances between every pair of teams are used to generate a rating for each team. Multiple options have been considered to use these distances to generate rating such as taking an average distance from a reference for each team or multidimensional scaling. Currently something similar to an average is used. The expected margin of victory between two teams playing head to head can be estimated as the difference between the teams' ratings.
             </p>
             <p>
                 The code for generating the graph and calculating the distances between teams can be seen <a href="https://github.com/markmoog/basketball_graph/blob/master/basketball_graph.nim">here</a>
