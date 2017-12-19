@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Ranking Analysis</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    </head>
+    <body>
+        <!-- Navbar -->
+        <nav class="navbar bg-inverse navbar-toggleable-sm navbar-inverse">
+            <div class="container">
+                <a class="navbar-brand" href="../index.html">Website</a>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+                        <li><a class="nav-link" href="ratings.html">Ratings</a></li>
+                        <li><a class="nav-link" href="win_trees.html">Win Trees</a></li>
+                        <li><a class="nav-link" href="ranking_analysis.html">Ranking Analysis</a></li>
+                    </ul>
+                </div>
+            </div>
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="true" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+        </nav>
+        <div class="container">
+            <!-- Intro block -->
+            <section class="jumbotron text-center">
+                <div class="container">
+                    <h1 class="jumbotron-heading">College Basketball Ranking Analysis</h1>
+                    <p class="text-muted">
+                        An analysis of rankings in the <a href="https://www.mratings.com/cb/compare.htm">College Basketball Ranking Composite</a>
+                    </p>
+                </div>
+            </section>
+            <p></p>
+            <p class='text-center'>Last updated on 12/18/17</p>
+            <div class="vis text-center" id="vis"></div>
+                        <div class="container text-muted text-center">
+                <small><p>Created with data from <a href="https://www.mratings.com/cb/compare.htm">Kenneth Massey</a>.</p>
+                </small>
+            </div>
+            <p>The <b>retrodictive accuracy</b> of a ranking system is the fraction of games that were played before the ranking was released where the higher ranked team won. Retrodictive accuracy is updated weekly using rankings compiled by <a href="https://www.mratings.com/cb/compare.htm">Massey</a>.</p>
+            <p>The <b>predictive accuracy</b> of a ranking system is the fraction of games played after the ranking is released where the higher ranked team won. To calculate the predictive accuracy of ranking systems, rankings are downloaded from <a href="https://www.mratings.com/cb/compare.htm">Massey</a> at the beginning of the week and used to predict the result of the week's games. A cumulative total of all games predicted correctly through all weeks is divided by the total number of games played to get the predictive accuracy of each system. SInce it is difficult to create a predictive ranking system at the beginning of the season when there is little data, only games after 3 to 4 weeks into the season (games after 12/3/17) are considered for this analysis.</p>
+            <p>Since the rankings used for this analysis are only updated once a week and do not take into account home court advantage and other factors that ranking systems often adjust for, this analysis is not fully representative of the included systems' accuracies.</p>
+            <div class="predictive_trend">
+            </div>
+
+            <div class="retrodictive_trend">
+            </div>
+        </div>
+        <hr>
+        <footer>
+            <ul class="bottom_ul">
+                <li>&copy;2017</li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="legal.html">Terms of Use</a></li>
+            </ul>
+        </footer>
+        <!-- CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+        <link href="../css/styles.css" rel="stylesheet">
+        <!-- Import Vega 3 -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/vega/3.0.7/vega.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/vega-embed/3.0.0-beta.20/vega-embed.js"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <!-- Bootstrap files from CDN -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+        <!-- JS for the visualization -->
+        <script type="text/javascript" src="../js/ranking_analysis.js"></script>
+    </body>
+</html>

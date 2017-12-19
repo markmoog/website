@@ -1,0 +1,156 @@
+{
+  "$schema": "https://vega.github.io/schema/vega/v3.0.json",
+  "padding": 0,
+  "autosize": "fit",
+
+  "signals":[
+    { "name": "x_domain", "update": "[-width, width]", "react":false,
+        "on": [
+            {
+                "events": {"signal": "delta"},
+                "update": "[xcur[0] + span(xcur) * delta[0] / width, xcur[1] + span(xcur) * delta[0] / width]"
+            }
+        ]
+    },
+    { "name": "y_domain", "update": "[-height, height]", "react":false,
+        "on": [
+            {
+                "events": {"signal": "delta"},
+                "update": "[ycur[0] - span(ycur) * delta[1] / height, ycur[1] - span(ycur) * delta[1] / height]"
+            }
+        ]
+    },
+    { "name": "x_range", "update": "[0, width]" },
+    { "name": "y_range", "update": "[0, height]" },
+    {
+      "name": "down", "value": null,
+      "on": [
+        {"events": "touchend", "update": "null"},
+        {"events": "mousedown, touchstart", "update": "xy()"}
+      ]
+    },
+    {
+      "name": "xcur", "value": null,
+      "on": [
+        {
+          "events": "mousedown, touchstart, touchend",
+          "update": "slice(x_domain)"
+        }
+      ]
+    },
+    {
+      "name": "ycur", "value": null,
+      "on": [
+        {
+          "events": "mousedown, touchstart, touchend",
+          "update": "slice(y_domain)"
+        }
+      ]
+    },
+    {
+      "name": "delta", "value": [0, 0],
+      "on": [
+        {
+          "events": [
+            {
+              "source": "window", "type": "mousemove", "consume": true,
+              "between": [{"type": "mousedown"}, {"source": "window", "type": "mouseup"}]
+            },
+            {
+              "type": "touchmove", "consume": true,
+              "filter": "event.touches.length === 1"
+            }
+          ],
+          "update": "down ? [down[0]-x(), y()-down[1]] : [0,0]"
+        }
+      ]
+    }
+  ],
+
+  "data": [
+    {
+      "name": "tree"
+    },
+    {
+      "name": "links"
+    },
+    {
+      "name": "highlight_links"
+    }
+  ],
+
+  "scales": [
+    {
+      "name": "y_scale",
+      "zero": false,
+      "range": {"signal": "y_range"},
+      "domain": {"signal": "y_domain"}
+    },
+    {
+      "name": "x_scale",
+      "zero": false,
+      "range": {"signal": "x_range"},
+      "domain": {"signal": "x_domain"}
+    }
+  ],
+
+  "marks": [
+    {
+      "type": "path",
+      "from": {"data": "links"},
+      "encode": {
+        "update": {
+          "x": {"scale": "x_scale", "field": "x"},
+          "y": {"scale": "y_scale", "field": "y"},
+          "path": {"field": "path"},
+          "stroke": {"value": "#eee"}
+        }
+      }
+    },
+    {
+      "type": "path",
+      "from": {"data": "highlight_links"},
+      "encode": {
+        "update": {
+          "x": {"scale": "x_scale", "field": "x"},
+          "y": {"scale": "y_scale", "field": "y"},
+          "path": {"field": "path"},
+          "stroke": {"value": "#C9B"}
+        }
+      }
+    },
+    {
+      "type": "symbol",
+      "from": {"data": "tree"},
+      "encode": {
+        "enter": {
+          "size": {"field": "size"}
+        },
+        "update": {
+          "x": {"scale": "x_scale", "field": "x"},
+          "y": {"scale": "y_scale", "field": "y"},
+          "fill": {"field": "color"}
+        }
+      }
+    },
+    {
+      "type": "text",
+      "from": {"data": "tree"},
+      "encode": {
+        "enter": {
+          "text": {"field": "name"},
+          "fontSize": {"value": 10},
+          "baseline": {"value": "middle"}
+        },
+        "update": {
+          "x": {"scale": "x_scale", "field": "x"},
+          "y": {"scale": "y_scale", "field": "y"},
+          "dx": {"signal": "(datum.leftside ? -1 : 1) * 6"},
+          "angle": {"signal": "datum.leftside ? datum.angle - 180 : datum.angle"},
+          "align": {"signal": "datum.leftside ? 'right' : 'left'"},
+          "fontWeight": {"signal": "datum.bold ? 'bold' : 'normal'"}
+        }
+      }
+    }
+  ]
+}

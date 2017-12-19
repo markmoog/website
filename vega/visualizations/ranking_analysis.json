@@ -1,0 +1,120 @@
+{
+  "$schema": "https://vega.github.io/schema/vega/v3.0.json",
+
+  "data": [
+    {
+      "name": "total"
+    }
+  ],
+  "autosize": {
+    "type": "fit"
+  },
+  "scales": [
+    {
+      "name": "x",
+      "type": "linear",
+      "domain": [0.69, 0.76],
+      "zero": false,
+      "range": "width"
+    },
+    {
+      "name": "y",
+      "type": "linear",
+      "domain": [0.78, 0.85],
+      "zero": false,
+      "range": "height"
+    }
+  ],
+  "axes": [
+    {
+      "scale": "x",
+      "grid": true,
+      "orient": "bottom",
+      "tickCount": 5,
+      "title": "Predictive Accuracy",
+      "encode":{
+        "labels":{
+          "enter":{
+            "fontSize": {"value": 16}
+          }
+        },
+        "title": {
+          "enter": {
+            "fontSize": {"value": 16}
+          }
+        }
+      }
+    },
+    {
+      "scale": "x",
+      "orient": "top",
+      "tickCount": 0
+    },
+    {
+      "scale": "y",
+      "domain": false,
+      "grid": true,
+      "orient": "left",
+      "tickCount": 5,
+      "title": "Retrodictive Accuracy",
+      "encode":{
+        "labels":{
+          "enter":{
+            "fontSize": {"value": 16}
+          }
+        },
+        "title": {
+          "enter": {
+            "fontSize": {"value": 16}
+          }
+        }
+      }
+    }
+  ],
+  "marks": [
+    {
+      "type": "text",
+      "from": {"data": "total"},
+      "encode": {
+        "enter": {
+          "text": {"field": "system"},
+          "fontSize": {"value": 12},
+          "baseline": {"value": "middle"}
+        },
+        "update": {
+          "x": {"scale": "x", "field": "predict_acc"},
+          "y": {"scale": "y", "field": "retro_acc"},
+          "dx": {"value": 5}
+        }
+      }
+    },
+    {
+      "name": "marks",
+      "type": "symbol",
+      "from": {
+        "data": "total"
+      },
+      "encode": {
+        "enter": {
+          "x": {
+            "scale": "x",
+            "field": "predict_acc"
+          },
+          "y": {
+            "scale": "y",
+            "field": "retro_acc"
+          },
+          "size": {
+            "value": 100
+          },
+          "shape": {
+            "value": "circle"
+          },
+          "fill": {
+            "value": "#4682B4"
+          }
+        }
+      }
+    }
+  ]
+}

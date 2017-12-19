@@ -11,7 +11,6 @@
 
 table {
     margin: auto;
-
 }
 
 td:first-child {
@@ -25,9 +24,11 @@ td:nth-last-child(1) {
 
 tr:nth-child(even) {background: #F6F6F6};
 
-.ui-helper-hidden-accessible { display:none; }
-
 /* from StackOverflow */
+.ui-helper-hidden-accessible {
+      display: none;
+}
+
 .ui-autocomplete {
     position: absolute;
     top: 100%;
@@ -76,4 +77,9 @@ tr:nth-child(even) {background: #F6F6F6};
     -webkit-border-radius: 0px;
     -moz-border-radius: 0px;
     background-image: none;
+}
+
+/*this needs to be repeaated here I guess*/
+.ui-helper-hidden-accessible {
+      display: none;
 }

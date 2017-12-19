@@ -1,9 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>Terms of Use</title>
+        <title>Graph Ratings</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <!-- JS (needs to be in head) -->
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/4.1.2/papaparse.js"></script>
     </head>
     <body>
         <!-- Navbar -->
@@ -22,17 +25,48 @@
             <span class="navbar-toggler-icon"></span>
             </button>
         </nav>
-        <div class="container" style="margin-top:1rem">
+        <div class="container">
+            <!-- Intro block -->
             <section class="jumbotron text-center">
                 <div class="container">
-                    <h1 class="jumbotron-heading">Terms of Use</h1>
+                    <h1 class="jumbotron-heading">College Basketball Ratings</h1>
+                    <p class="text-muted">
+                        Rating methodology can be found <a href="methodology.html">here</a>
+                    </p>
                 </div>
             </section>
-            <p style="margin-top:1rem">
-                All content on this website is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>. This website and all content within is provided on an as-is basis, use at your own risk.
-            </p>
-            <hr>
+            <p></p>
+            <div class="text-center" style="padding-bottom:20px">
+                <h4>2017-2018 Ratings</h4>
+                <p class="text-muted">Includes results through 12/18/17</p>
+            </div>
+            <div class="ratings">
+                <!-- ratings table goes here -->
+                <script>
+                    function create_table(data) {
+                        var table = $('<table><tr><th></th><th>School</th><th>Rating</th></tr></table>')
+                        $(data).each(function (i, row_data) {
+                            var row = $('<tr></tr>')
+                            row.append('<td>' + (i+1) + '</td>')
+                            $(row_data).each(function (j, cell_data) {
+                                row.append($('<td>' + cell_data + '</td>'))
+                            })
+                            table.append(row)
+                        })
+                        return table
+                    }
+
+                    $.ajax({
+                        type: "GET",
+                        url: "../ratings/ratings_2018.csv",
+                        success: function (data) {
+                            $('.ratings').append(create_table(Papa.parse(data).data))
+                        }
+                    })
+                </script>
+            </div>
         </div>
+        <hr>
         <footer>
             <ul class="bottom_ul">
                 <li>&copy;2017</li>
@@ -41,10 +75,10 @@
                 <li><a href="legal.html">Terms of Use</a></li>
             </ul>
         </footer>
+        <!-- CSS -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
         <link href="../css/styles.css" rel="stylesheet">
         <!-- Bootstrap files from CDN -->
-        <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
     </body>

@@ -1,38 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>The Website</title>
+        <title>Moog</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
-        <link href="css/styles.css" rel="stylesheet">
     </head>
     <body>
         <!-- Navbar -->
         <nav class="navbar bg-inverse navbar-toggleable-sm navbar-inverse">
             <div class="container">
-                <a class="navbar-brand" href="#">The Website</a>
+                <a class="navbar-brand" href="#">Website</a>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav mr-auto">
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" role="button">
-                                Ratings
-                            </a>
-                            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                <a class="dropdown-item" href="documents/ncaabb_ratings.html">College Basketball</a>
-                                <a class="dropdown-item disabled" href="#">College Football</a>
-                                <a class="dropdown-item disabled" href="#">NBA</a>
-                                <a class="dropdown-item disabled" href="#">NFL</a>
-                            </div>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" role="button">
-                                Visualizations
-                            </a>
-                            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                <a class="dropdown-item" href="documents/basketball_trees.html">College Basketball Win Trees</a>
-                            </div>
-                        </li>
+                        <li><a class="nav-link" href="documents/ratings.html">Ratings</a></li>
+                        <li><a class="nav-link" href="documents/win_trees.html">Win Trees</a></li>
+                        <li><a class="nav-link" href="documents/ranking_analysis.html">Ranking Analysis</a></li>
                     </ul>
                 </div>
             </div>
@@ -44,39 +26,47 @@
             <!-- Intro block -->
             <section class="jumbotron text-center jumbotron-custom">
                 <div class="container">
-                    <h1 class="jumbotron-heading">The Website</h1>
-                    <p class="lead text-muted">A mix of math, programming, and sports.</p>
+                    <h1 class="jumbotron-heading">Mark Moog's Website</h1>
+                    <p class="lead text-muted">It's mostly about college basketball.</p>
                 </div>
             </section>
             <!-- List of Articles -->
             <div class="container">
                 <div class="row">
                     <div class="col-lg-4">
-                        <h3>Quantifying Randomness in Sports</h3>
+                        <h3>Ranking Analysis</h3>
+                        <small class='text-muted'>Published 12/18/17</small>
                         <p>
-                            In sports the outcome of the game is not the same every time teams play, there is some inherent randomness in the game. This randomness puts an upper limit on the accuracy of predictions, and understanding it is important for evaluating sport models.
+                            A comparison of the overall predictive and retrodictve accuracy and trends of rankings systems in Massey's <a href="https://www.mratings.com/cb/compare.htm">Basketball Composite</a>.
                         </p>
-                        <p>
-                            <a class="btn btn-primary disabled" href="documents/quantifying_randomness.html" role="button">Coming Soon</a>
-                        </p>
+                        <p><a class="btn btn-primary" href="documents/ranking_analysis.html" role="button">Read</a></p>
                     </div>
                     <div class="col-lg-4">
-                        <h3>Graph Ratings Methodology</h3>
+                        <h3>Basketball Ratings</h3>
+                        <small class='text-muted'>Published 11/20/17</small>
                         <p>
-                            Graphs are a mathematical objects which describe a set of things and the relationships between them. Using a graph, distances between teams are determined which are then used to find create team ratings.
+                            The results of my predictive rating algorithm for college basketball. Updated fairly often during the season.
                         </p>
-                        <p>
-                            <a class="btn btn-primary" href="documents/graph_ratings.html" role="button">Read</a>
-                        </p>
+                        <p><a class="btn btn-primary" href="documents/ratings.html" role="button">Read</a></p>
                     </div>
                     <div class="col-lg-4">
-                        <h3>Simulating Basketball Games</h3>
+                        <h3>Ratings Methodology</h3>
+                        <small class='text-muted'>Published 11/20/17</small>
                         <p>
-                            A recurrent neural network is trained to simulate basketball games play by play. By observing how changes in team features affect the simulated game outcome, the impact of incremental improvement in various aspects of a team can be quantified.
+                            A description of my graph based predictive rating algorithm for college basketball. Code available inside.
                         </p>
+                        <p><a class="btn btn-primary" href="documents/methodology.html" role="button">Read</a></p>
+                    </div>
+
+                </div>
+                <div class="row">
+                    <div class="col-lg-4">
+                        <h3>Win Trees</h3>
+                        <small class='text-muted'>Published 11/1/17</small>
                         <p>
-                            <a class="btn btn-primary disabled" href="#" role="button">Coming Soon</a>
+                            The transitive property does not translate well as an analytical tool for sports, but it does make interesting visualizations. Win trees visualize all the teams a team has transitively beaten.
                         </p>
+                        <p><a class="btn btn-primary" href="documents/win_trees.html" role="button">Read</a></p>
                     </div>
                 </div>
             </div>
@@ -91,8 +81,10 @@
             </ul>
         </footer>
         <!-- Bootstrap files from CDN -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
         <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+        <link href="css/styles.css" rel="stylesheet">
     </body>
 </html>
