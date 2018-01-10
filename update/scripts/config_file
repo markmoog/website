@@ -1,4 +1,4 @@
 games path: ./data/cbbga18.txt
 teams path: ./data/teams.txt
 output path: output.csv
-max depth: 7
+max depth: 6

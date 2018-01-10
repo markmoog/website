@@ -13,14 +13,14 @@
     {
       "name": "x",
       "type": "linear",
-      "domain": [0.69, 0.76],
+      "domain": {"data": "total", "field": "predict_acc"},
       "zero": false,
       "range": "width"
     },
     {
       "name": "y",
       "type": "linear",
-      "domain": [0.78, 0.85],
+      "domain": {"data": "total", "field": "retro_acc"},
       "zero": false,
       "range": "height"
     }
@@ -29,6 +29,7 @@
     {
       "scale": "x",
       "grid": true,
+      "domain": false,
       "orient": "bottom",
       "tickCount": 5,
       "title": "Predictive Accuracy",
@@ -44,11 +45,6 @@
           }
         }
       }
-    },
-    {
-      "scale": "x",
-      "orient": "top",
-      "tickCount": 0
     },
     {
       "scale": "y",

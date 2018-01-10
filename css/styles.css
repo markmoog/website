@@ -13,6 +13,13 @@ table {
     margin: auto;
 }
 
+th{
+    padding-left: 10px
+}
+td{
+    padding-left: 10px;
+}
+
 td:first-child {
     padding-right:20px;
     text-align: center;
