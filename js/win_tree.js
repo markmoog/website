@@ -4,7 +4,7 @@ var highlight_teams = []
 
 $( function() {
     set_year(2018)
-    var teams_path = '../trees/teams.json'
+    var teams_path = '../data/win_trees/teams.json'
 
     var xobj = new XMLHttpRequest();
     xobj.overrideMimeType("application/json");
@@ -25,11 +25,11 @@ function setup_autocomplete(teams) {
 };
 
 function set_year(year){
-    document.getElementById("dropdownMenuButton").innerHTML=year
+    document.getElementById("yearSelector").innerHTML=year
 }
 
 function load_ratings(year){
-    var edge_path = '../ratings/ratings_' + year + '.csv'
+    var edge_path = '../data/ratings/ratings_' + year + '.csv'
     var xobj = new XMLHttpRequest();
     xobj.overrideMimeType("application/json");
     xobj.open('GET', edge_path, true);
@@ -43,8 +43,8 @@ function load_ratings(year){
 }
 
 function load_edges() {
-    var year = document.getElementById("dropdownMenuButton").innerHTML
-    var edge_path = '../trees/edges' + year + '.json'
+    var year = document.getElementById("yearSelector").innerHTML
+    var edge_path = '../data/win_trees/edges' + year + '.json'
 
     var xobj = new XMLHttpRequest();
     xobj.overrideMimeType("application/json");
@@ -208,13 +208,13 @@ function vegafy_root(node, vega_tree, display_size){
 }
 
 function update_vega(nodes, links, highlight_links, display_size){
-    var spec = "../vega/visualizations/basketball_tree.json"
+    var spec = "../vega/basketball_tree.json"
     var dimesnion = 0
 
     var chkBox = document.getElementById('large_image');
     if (chkBox.checked){
         dimension = display_size
-        spec = "../vega/visualizations/basketball_tree_large.json"
+        spec = "../vega/basketball_tree_large.json"
     }else{
         var vega_div = document.getElementById('vis');
         var position_info = vega_div.getBoundingClientRect();

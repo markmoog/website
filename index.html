@@ -1,32 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>Moog</title>
+        <title>Mark Moog</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     </head>
     <body>
         <!-- Navbar -->
-        <nav class="navbar bg-inverse navbar-toggleable-sm navbar-inverse">
+        <nav class="navbar bg-dark navbar-expand-sm navbar-dark">
             <div class="container">
-                <a class="navbar-brand" href="#">Website</a>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <a class="navbar-brand" href="../index.html">Website</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarLinks" aria-controls="navbarLinks" aria-expanded="true" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarLinks">
                     <ul class="navbar-nav mr-auto">
+                        <li><a class="nav-link" href="documents/ranking_analysis.html">Ranking Analysis</a></li>
                         <li><a class="nav-link" href="documents/ratings.html">Ratings</a></li>
                         <li><a class="nav-link" href="documents/win_trees.html">Win Trees</a></li>
-                        <li><a class="nav-link" href="documents/ranking_analysis.html">Ranking Analysis</a></li>
                     </ul>
                 </div>
             </div>
-            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="true" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-            </button>
         </nav>
         <div class="container">
             <!-- Intro block -->
             <section class="jumbotron text-center jumbotron-custom">
                 <div class="container">
-                    <h1 class="jumbotron-heading">Mark Moog's Website</h1>
+                    <h1 class="jumbotron-heading">Visualizations, Ratings, and More</h1>
                     <p class="lead text-muted">It's mostly about college basketball.</p>
                 </div>
             </section>
@@ -36,33 +36,34 @@
                     <div class="col-lg-4">
                         <h3>Ranking Analysis</h3>
                         <p>
-                            A comparison of the overall predictive and retrodictve accuracy and trends of rankings systems in Massey's <a href="https://www.mratings.com/cb/compare.htm">Basketball Composite</a>.
+                            A comparison of the overall predictive and retrodictive accuracy and trends of rankings systems in Massey's <a href="https://www.mratings.com/cb/compare.htm">Basketball Composite</a>. Updated daily throughout the season.
                         </p>
-                        <p><a class="btn btn-primary" href="documents/ranking_analysis.html" role="button">Read</a></p>
+                        <p><a class="btn btn-outline-primary btn-sm" href="documents/ranking_analysis.html" role="button">Read</a></p>
                     </div>
                     <div class="col-lg-4">
                         <h3>Basketball Ratings</h3>
                         <p>
-                            The results of my predictive rating algorithm for college basketball. Updated fairly often during the season.
+                            Ratings produced by my predictive algorithm for college basketball. Updated daily throughout the season.
                         </p>
-                        <p><a class="btn btn-primary" href="documents/ratings.html" role="button">Read</a></p>
+                        <p><a class="btn btn-outline-primary btn-sm" href="documents/ratings.html" role="button">Read</a></p>
                     </div>
-                    <div class="col-lg-4">
-                        <h3>Ratings Methodology</h3>
-                        <p>
-                            A description of my graph based predictive rating algorithm for college basketball. Code available inside.
-                        </p>
-                        <p><a class="btn btn-primary" href="documents/methodology.html" role="button">Read</a></p>
-                    </div>
-
-                </div>
-                <div class="row">
                     <div class="col-lg-4">
                         <h3>Win Trees</h3>
                         <p>
                             The transitive property does not translate well as an analytical tool for sports, but it does make interesting visualizations. Win trees visualize all the teams a team has transitively beaten.
                         </p>
-                        <p><a class="btn btn-primary" href="documents/win_trees.html" role="button">Read</a></p>
+                        <p><a class="btn btn-outline-primary btn-sm" href="documents/win_trees.html" role="button">Read</a></p>
+                    </div>
+                </div>
+                <a class="btn btn-block btn-light" data-toggle="collapse" href="#moreArticles" aria-expanded="false" aria-controls="moreArticles">More...</a>
+                <div class="collapse" id="moreArticles">
+                    <br>
+                    <div>
+                        <h3>Ratings Methodology</h3>
+                        <p>
+                            A description of my graph based predictive rating algorithm for college basketball. Code available inside.
+                        </p>
+                        <p><a class="btn btn-outline-primary btn-sm" href="documents/methodology.html" role="button">Read</a></p>
                     </div>
                 </div>
             </div>
@@ -70,17 +71,18 @@
         </div>
         <footer>
             <ul class="bottom_ul">
-                <li>&copy;2017</li>
+                <li>&copy;2017-2018</li>
                 <li><a href="documents/about.html">About</a></li>
                 <li><a href="documents/contact.html">Contact</a></li>
                 <li><a href="documents/legal.html">Terms of Use</a></li>
             </ul>
         </footer>
-        <!-- Bootstrap files from CDN -->
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
-        <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
-        <link href="css/styles.css" rel="stylesheet">
+        <!-- CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
+        <link href="../css/styles.css" rel="stylesheet">
+        <!-- Bootstrap -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js" integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4" crossorigin="anonymous"></script>
     </body>
 </html>

@@ -9,6 +9,8 @@ import json
 # constants and initializations
 ranking_dates = [datetime.date(2017,12,17), datetime.date(2017,12,24), datetime.date(2017,12,31), datetime.date(2018,1,7)]
 systems = ['ARG', 'BBT', 'BUR', 'BWE', 'COL', 'DAV', 'DCI', 'DII', 'DOK', 'DOL', 'EBP', 'FAS', 'FMG', 'FSH', 'HAS', 'KPK', 'LOG', 'MAS', 'MMG', 'MOR', 'PGH', 'PIG', 'POM', 'PRR', 'RPI', 'RT', 'RTH', 'RTP', 'SAG', 'SEL', 'SGR', 'SMN', 'STH', 'TRK', 'TRP', 'WIL', 'WLK', 'WOL', 'YAG', 'ZAM']
+header_blacklist = ['Rank', 'Mean', 'Trimmed', 'Median', 'StDev', 'AP', 'DES', 'USA']
+
 teams = []
 retrodictive_counts = []
 predictive_counts = []

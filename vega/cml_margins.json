@@ -1,0 +1,129 @@
+{
+  "padding": {
+    "top": 10,
+    "right": 10,
+    "left": 70,
+    "bottom": 50
+  },
+  "autosize": {
+    "type": "none"
+  },
+  "signals": [
+    {
+      "name": "path",
+      "value": 2,
+      "bind": {
+        "input": "range",
+        "min": 2,
+        "max": 7,
+        "step": 1
+      }
+    }
+  ],
+  "data": [
+    {
+      "name": "source",
+      "url": "https://gist.githubusercontent.com/markmoog/7374a9fa3014d36995b4973febdd73f3/raw/af70f9b4ff438410c510b1004754ed18bd4de9bf/margins.csv",
+      "format": {
+        "type": "csv",
+        "parse": {
+            "bin": "number",
+            "count": "number",
+            "path_length": "number"
+        },
+        "delimiter": ","
+      },
+      "transform": [
+        {
+          "type": "filter",
+          "expr": "datum.path_length===path"
+        }
+      ]
+    }
+  ],
+  "scales": [
+    {
+      "name": "x",
+      "type": "linear",
+      "domain": {
+        "data": "source",
+        "field": "bin"
+      },
+      "range": [
+        0,
+        250
+      ]
+    },
+    {
+      "name": "y",
+      "type": "linear",
+      "domain": {
+        "data": "source",
+        "field": "count"
+      },
+      "range": [
+        250,
+        0
+      ]
+    }
+  ],
+  "marks": [
+    {
+      "name": "marks",
+      "type": "rect",
+      "from": {"data": "source"},
+      "encode": {
+        "update": {
+          "x": {"scale": "x", "field": "bin"},
+          "width": {"scale": "x", "band": 1},
+          "y": {"scale": "y","field": "count"},
+          "y2": {"scale": "y", "value": 0},
+          "strokeWidth": {"value": 2},
+          "stroke": {"value": "#4682b4"}
+        }
+      }
+    }
+  ],
+  "axes": [
+    {
+      "scale": "x",
+      "grid": true,
+      "orient": "bottom",
+      "tickCount": 5,
+      "title": "Cumulative Margin",
+      "encode":{
+        "labels":{
+          "enter":{
+            "fontSize": {"value": 16}
+          }
+        },
+        "title": {
+          "enter": {
+            "fontSize": {"value": 16}
+          }
+        }
+      }
+    },
+    {
+      "scale": "y",
+      "grid": true,
+      "domain": false,
+      "orient": "left",
+      "tickCount": 5,
+      "format": "s",
+      "title": "Count",
+      "encode":{
+        "labels":{
+          "enter":{
+            "fontSize": {"value": 16}
+          }
+        },
+        "title": {
+          "enter": {
+            "fontSize": {"value": 16}
+          }
+        }
+      }
+    }
+  ]
+}

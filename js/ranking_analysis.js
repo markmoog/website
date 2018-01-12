@@ -1,13 +1,14 @@
 var total_accuracy = {}
 var weekly_accuracy_pre = {}
 var weekly_accuracy_ret = {}
+var dates = ['12/17/17', '12/24/17', '12/31/17', '1/7/18']
 
 $( function() {
     load_rank_analysis()
 })
 
 function load_rank_analysis() {
-    var data_path = '../vega/data/ranking_analysis.json'
+    var data_path = '../data/ranking_analysis/ranking_analysis.json'
 
     var xobj = new XMLHttpRequest();
     xobj.overrideMimeType("application/json");
@@ -28,7 +29,7 @@ function load_rank_analysis() {
 }
 
 function load_rank_table() {
-    var data_path = '../data/system_info.csv'
+    var data_path = '../data/ranking_analysis/system_info.csv'
 
     var xobj = new XMLHttpRequest();
     xobj.overrideMimeType("application/json");
@@ -43,7 +44,6 @@ function load_rank_table() {
 }
 
 function create_table(data) {
-    console.log(total_accuracy)
     // create and fill in system info table
     var table = $('<table id="sysinfo" class="display"><thead><tr><th></th><th>System</th><th>P%</th><th>R%</th></tr></thead></table>')
     var body = $('<tbody></tbody>')
@@ -78,7 +78,7 @@ function create_table(data) {
 }
 
 function update_vega() {
-    var spec = "../vega/visualizations/ranking_analysis.json"
+    var spec = "../vega/ranking_analysis.json"
     var dim = 500
     vega.embed('#vis', spec, {"actions":false, "width": dim, "height": dim}).then(function(result){
         var view = result.view;
@@ -86,5 +86,37 @@ function update_vega() {
         .resize()
         .run();
     });
+}
+
+function set_date(date_index, end) {
+    if(end==0){
+        // set the start date
+        date = dates[date_index]
+        document.getElementById("startdate").innerHTML=date
+    }
+    if(end==1){
+        // set the end date
+        if(date_index >= dates.length){
+             document.getElementById("enddate").innerHTML='Now'
+         }else{
+            date = dates[date_index]
+            document.getElementById("enddate").innerHTML=date
+         }
+    }
+}
+
+function calculate_accuracies() {
+    start_date = document.getElementById("startdate").innerHTML
+    end_date = document.getElementById("enddate").innerHTML
+
+    start_index = dates.indexOf(start_date)
+    end_index = dates.indexOf(end_date)
+
+    if(start_index >= end_index && end_index != -1){
+        console.log("You picked an unusable range!!!!!")
+        return
+    }
+
+    console.log(start_index, end_index)
 }
 
