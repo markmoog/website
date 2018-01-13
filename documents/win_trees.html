@@ -9,7 +9,7 @@
         <!-- Navbar -->
         <nav class="navbar bg-dark navbar-expand-sm navbar-dark">
             <div class="container">
-                <a class="navbar-brand" href="../index.html">Website</a>
+                <a class="navbar-brand" href="../index.html"><img src="/img/logo.svg" width="60" height="30" alt=""></a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarLinks" aria-controls="navbarLinks" aria-expanded="true" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
                 </button>
@@ -36,22 +36,22 @@
                 <br>
                 <!-- I wish Safari would implement datalists, but since it hasn't I resort to jQuery for compatibility -->
                 <div class="btn-toolbar justify-content-center">
-                    <div class="dropdown">
-                        <button class="btn btn-light dropdown-toggle" type="button" id="yearSelector" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        2018
-                        </button>
-                        <div class="dropdown-menu" aria-labelledby="yearSelector">
-                            <button onclick="set_year(2018)" class="dropdown-item" type="button">2018</button>
-                            <button onclick="set_year(2017)" class="dropdown-item" type="button">2017</button>
-                            <button onclick="set_year(2016)" class="dropdown-item" type="button">2016</button>
-                            <button onclick="set_year(2015)" class="dropdown-item" type="button">2015</button>
-                            <button onclick="set_year(2014)" class="dropdown-item" type="button">2014</button>
-                        </div>
-                    </div>
                     <div class="input-group">
-                        <input type="text" id="team_selection" class="form-control" placeholder="Enter Team..." style="margin-left: 3px; margin-right: 3px;">
+                        <input type="text" id="team_selection" class="form-control" placeholder="Enter Team...">
+                        <div class="dropdown">
+                            <button class="btn btn-light dropdown-toggle" type="button" id="yearSelector" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            2018
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="yearSelector">
+                                <button onclick="set_year(2018)" class="dropdown-item" type="button">2018</button>
+                                <button onclick="set_year(2017)" class="dropdown-item" type="button">2017</button>
+                                <button onclick="set_year(2016)" class="dropdown-item" type="button">2016</button>
+                                <button onclick="set_year(2015)" class="dropdown-item" type="button">2015</button>
+                                <button onclick="set_year(2014)" class="dropdown-item" type="button">2014</button>
+                            </div>
+                        </div>
                         <span class="input-group-btn">
-                            <button class="btn btn-primary" type="button" onclick="load_edges()">Generate!</button>
+                            <button class="btn btn-outline-success" type="button" onclick="load_edges()">Go!</button>
                         </span>
                     </div>
                 </div>

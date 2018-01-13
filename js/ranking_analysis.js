@@ -45,7 +45,7 @@ function load_rank_table() {
 
 function create_table(data) {
     // create and fill in system info table
-    var table = $('<table id="sysinfo" class="display"><thead><tr><th></th><th>System</th><th>P%</th><th>R%</th></tr></thead></table>')
+    var table = $('<table id="sysinfo" class="table-striped table-hover table-sm table"><thead><tr><th scope="col"></th><th scope="col">System</th><th scope="col">P%</th><th scope="col">R%</th></tr></thead></table>')
     var body = $('<tbody></tbody>')
     $(data).each(function (i, row_data) {
         var row = $('<tr></tr>')
@@ -62,7 +62,7 @@ function create_table(data) {
             }
         }
         name = '<a href=' + row_data[2] + '>' + row_data[1] + '</a>'
-        row.append($('<td>' + abbr + '</td><td>' + name + '</td><td>' + pre_acc + '</td><td>' + ret_acc + '</td>'))
+        row.append($('<td class="text-center">' + abbr + '</td><td>' + name + '</td><td class="text-center">' + pre_acc + '</td><td class="text-center">' + ret_acc + '</td>'))
         body.append(row)
     })
 
@@ -71,8 +71,7 @@ function create_table(data) {
     $('#sysinfo').DataTable({
         "paging":   false,
         "searching": false,
-        "info":     false,
-        "autoWidth": false
+        "info":     false
     })
 
 }
