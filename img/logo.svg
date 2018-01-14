@@ -1,3 +1,113 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://web.resource.org/cc/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" height="130px" style="zoom: 2;" cursor="crosshair" id="svg_document" width="260px" baseProfile="full" version="1.1" preserveAspectRatio="xMidYMid meet" viewBox="0 0 260 130"><g id="main_group"></g><text stroke="none" style="outline-style:none;" id="text1" stroke-width="10px" x="67.5px" font-weight="lighter" text-rendering="geometricPrecision" font-family="HelveticaNeue-Medium" fill="white" font-size="180px" y="129px" transform="" text-anchor="middle">M</text><rect stroke="#000000" x="153px" height="15px" y="83px" stroke-width="0px" id="rect3" width="100px" fill="white" transform=""></rect><rect stroke="#000000" x="153px" height="15px" y="53px" stroke-width="0px" id="rect2" width="60px" fill="white" transform=""></rect><rect stroke="#000000" x="153px" height="15px" y="113px" stroke-width="0px" id="rect4" width="60px" fill="white" transform=""></rect></svg>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   height="130px"
+   cursor="crosshair"
+   id="svg_document"
+   width="260px"
+   version="1.1"
+   preserveAspectRatio="xMidYMid meet"
+   viewBox="0 0 260 130"
+   sodipodi:docname="logo.svg"
+   style="zoom: 2;"
+   inkscape:version="0.92.2 (5c3e80d, 2017-08-06)">
+  <metadata
+     id="metadata4580">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs4578" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1076"
+     inkscape:window-height="814"
+     id="namedview4576"
+     showgrid="true"
+     showguides="false"
+     inkscape:snap-grids="true"
+     inkscape:snap-to-guides="true"
+     inkscape:snap-page="false"
+     inkscape:snap-bbox="false"
+     inkscape:bbox-paths="true"
+     inkscape:pagecheckerboard="true"
+     borderlayer="true"
+     inkscape:zoom="2.1570171"
+     inkscape:cx="103.77903"
+     inkscape:cy="71.81105"
+     inkscape:window-x="338"
+     inkscape:window-y="59"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="svg_document">
+    <sodipodi:guide
+       position="0,0"
+       orientation="0,260"
+       id="guide4582"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="260,0"
+       orientation="-130,0"
+       id="guide4584"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="260,130"
+       orientation="0,-260"
+       id="guide4586"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="0,130"
+       orientation="130,0"
+       id="guide4588"
+       inkscape:locked="false" />
+  </sodipodi:namedview>
+  <g
+     id="main_group" />
+  <text
+     style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:173.33332825px;font-family:Helvetica;-inkscape-font-specification:'Helvetica, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff;stroke:none;stroke-width:10px;text-rendering:geometricPrecision"
+     id="text1"
+     x="75.5"
+     font-weight="lighter"
+     font-size="180px"
+     y="129">M</text>
+  <rect
+     x="153"
+     height="15"
+     y="83"
+     id="rect3"
+     width="100"
+     style="fill:#ffffff;stroke:#000000;stroke-width:0px" />
+  <rect
+     x="153"
+     height="15"
+     y="53"
+     id="rect2"
+     width="60"
+     style="fill:#ffffff;stroke:#000000;stroke-width:0px" />
+  <rect
+     x="153"
+     height="15"
+     y="113"
+     id="rect4"
+     width="60"
+     style="fill:#ffffff;stroke:#000000;stroke-width:0px" />
+</svg>

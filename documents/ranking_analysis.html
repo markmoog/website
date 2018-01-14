@@ -7,6 +7,8 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/4.1.2/papaparse.js"></script>
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
         <script type="text/javascript" charset="utf8" src="//cdn.datatables.net/1.10.16/js/jquery.dataTables.js"></script>
+        <!-- Icon Font -->
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
     </head>
     <body>
         <!-- Navbar -->
@@ -36,16 +38,15 @@
                 </div>
             </section>
             <p></p>
-            <p class='text-center'>Includes games through 01/11/18</p>
+            <p class='text-center'>Includes games through 01/13/18</p>
             <div class="vis text-center" id="vis"></div>
             <div class="container text-muted text-center">
                 <small><p>Created with data from <a href="https://www.mratings.com/cb/compare.htm">Kenneth Massey</a>.</p>
                 </small>
             </div>
             <div class="col-lg-6 mx-auto">
-                <div class="card">
-                    <div class="card-header text-center">
-                        <a data-toggle="collapse" href="#legend" aria-expanded="false" aria-controls="legend">Ranking Key</a>
+                <div class="card accordion">
+                    <a class="card-header text-center collapsed" data-toggle="collapse" href="#legend" aria-expanded="false" aria-controls="legend">Ranking Key and Info</a>
                     </div>
                     <div id="legend" class="collapse">
                         <div class="card-block legend">
@@ -65,7 +66,7 @@
         <hr>
         <footer>
             <ul class="bottom_ul">
-                <li>&copy;2017-2018</li>
+                <li>&copy;2017-<script>document.write(new Date().getFullYear());</script></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="contact.html">Contact</a></li>
                 <li><a href="legal.html">Terms of Use</a></li>
