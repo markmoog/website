@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>Contact</title>
+        <title>Terms of Use</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     </head>
@@ -9,39 +9,41 @@
         <!-- Navbar -->
         <nav class="navbar bg-dark navbar-expand-sm navbar-dark">
             <div class="container">
-                <a class="navbar-brand" href="../index.html"><img src="/img/logo.svg" width="60" height="30" alt=""></a>
+                <a class="navbar-brand" href="/"><img src="/img/logo.svg" width="60" height="30" alt=""></a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarLinks" aria-controls="navbarLinks" aria-expanded="true" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarLinks">
-                    <ul class="navbar-nav mr-auto">
-                        <li><a class="nav-link" href="ranking_analysis.html">Ranking Analysis</a></li>
-                        <li><a class="nav-link" href="ratings.html">Ratings</a></li>
-                        <li><a class="nav-link" href="win_trees.html">Win Trees</a></li>
+                    <ul class="navbar-nav align-bottom">
+                        <li><a class="nav-link" href="/ranking_analysis">Ranking Analysis</a></li>
+                        <li><a class="nav-link" href="/ratings">Ratings</a></li>
+                        <li><a class="nav-link" href="/win_trees">Win Trees</a></li>
                     </ul>
                 </div>
             </div>
         </nav>
-        <div class="container" style="margin-top:1rem">
+        <div class="container">
             <section class="jumbotron text-center">
                 <div class="container">
-                    <h1 class="jumbotron-heading">Contact Information</h1>
+                    <h1 class="jumbotron-heading">Terms of Use</h1>
                 </div>
             </section>
-            <p style="margin-top:1rem">Questions and comments are welcome! Please send feedback to markmoog at gmail dot com.</p>
+            <p>
+                All content on this website is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>. This website and all content within is provided on an as-is basis, use at your own risk.
+            </p>
             <hr>
         </div>
         <footer>
             <ul class="bottom_ul">
                 <li>&copy;2017-<script>document.write(new Date().getFullYear());</script></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="legal.html">Terms of Use</a></li>
+                <li><a href="/about">About</a></li>
+                <li><a href="/contact">Contact</a></li>
+                <li><a href="/legal">Terms of Use</a></li>
             </ul>
         </footer>
         <!-- CSS -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
-        <link href="../css/styles.css" rel="stylesheet">
+        <link href="/css/styles.css" rel="stylesheet">
         <!-- Bootstrap -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>

@@ -9,15 +9,15 @@
         <!-- Navbar -->
         <nav class="navbar bg-dark navbar-expand-sm navbar-dark">
             <div class="container">
-                <a class="navbar-brand" href="../index.html"><img src="/img/logo.svg" width="60" height="30" alt=""></a>
+                <a class="navbar-brand" href="/"><img src="/img/logo.svg" width="60" height="30" alt=""></a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarLinks" aria-controls="navbarLinks" aria-expanded="true" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarLinks">
-                    <ul class="navbar-nav mr-auto">
-                        <li><a class="nav-link" href="ranking_analysis.html">Ranking Analysis</a></li>
-                        <li><a class="nav-link" href="ratings.html">Ratings</a></li>
-                        <li><a class="nav-link" href="win_trees.html">Win Trees</a></li>
+                    <ul class="navbar-nav align-bottom">
+                        <li><a class="nav-link" href="/ranking_analysis">Ranking Analysis</a></li>
+                        <li><a class="nav-link" href="/ratings">Ratings</a></li>
+                        <li><a class="nav-link" href="/win_trees">Win Trees</a></li>
                     </ul>
                 </div>
             </div>
@@ -39,7 +39,7 @@
                     <div class="input-group">
                         <input type="text" id="team_selection" class="form-control" placeholder="Enter Team...">
                         <div class="dropdown">
-                            <button class="btn btn-light dropdown-toggle" type="button" id="yearSelector" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <button class="btn btn-outline-secondary dropdown-toggle" type="button" id="yearSelector" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             2018
                             </button>
                             <div class="dropdown-menu" aria-labelledby="yearSelector">
@@ -51,12 +51,12 @@
                             </div>
                         </div>
                         <span class="input-group-btn">
-                            <button class="btn btn-outline-success" type="button" onclick="load_edges()">Go!</button>
+                            <button class="btn btn-success" type="button" onclick="load_edges()">Go!</button>
                         </span>
                     </div>
                 </div>
                 <p class='text-center text-muted'>
-                    <small>The 2018 trees include games through 01/13/18</small>
+                    <small>The 2018 trees include games through 01/15/18</small>
                 </p>
                 <div class="btn-toolbar justify-content-center">
                     <input type="text" id="highlight_selection" class="form-control" placeholder="Enter (comma seperated) opponents to highlight...">
@@ -73,7 +73,7 @@
             <p></p>
             <p class="text-center" id="teams_contained"></p>
             <p class="text-center">Click or touch to scroll around the generated tree</p>
-            <div class="text-center" id="vis" style="padding:20px;">
+            <div class="text-center p-3" id="vis">
                 <!-- This div holds the vega visualization (generated in basketball_tree.js) -->
             </div>
         </div>
@@ -90,14 +90,14 @@
     <footer>
         <ul class="bottom_ul">
             <li>&copy;2017-<script>document.write(new Date().getFullYear());</script></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="contact.html">Contact</a></li>
-            <li><a href="legal.html">Terms of Use</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/contact">Contact</a></li>
+            <li><a href="/legal">Terms of Use</a></li>
         </ul>
     </footer>
     <!-- CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
-    <link href="../css/styles.css" rel="stylesheet">
+    <link href="/css/styles.css" rel="stylesheet">
     <!-- Bootstrap -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
@@ -109,6 +109,6 @@
     <!-- Autocomplete  -->
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <!-- Custom JS-->
-    <script type="text/javascript" src="../js/win_tree.js"></script>
+    <script type="text/javascript" src="/js/win_tree.js"></script>
 </body>
 </html>

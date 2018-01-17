@@ -7,7 +7,7 @@ import datetime
 import json
 
 # constants and initializations
-ranking_dates = [datetime.date(2017,12,17), datetime.date(2017,12,24), datetime.date(2017,12,31), datetime.date(2018,1,7)]
+ranking_dates = [datetime.date(2017,12,17), datetime.date(2017,12,24), datetime.date(2017,12,31), datetime.date(2018,1,7), datetime.date(2018,1,14)]
 systems = ['ARG', 'BBT', 'BUR', 'BWE', 'COL', 'DAV', 'DCI', 'DII', 'DOK', 'DOL', 'EBP', 'FAS', 'FMG', 'FSH', 'HAS', 'KPK', 'LOG', 'MAS', 'MMG', 'MOR', 'PGH', 'PIG', 'POM', 'PRR', 'RPI', 'RT', 'RTH', 'RTP', 'SAG', 'SEL', 'SGR', 'SMN', 'STH', 'TRK', 'TRP', 'WIL', 'WLK', 'WOL', 'YAG', 'ZAM']
 header_blacklist = ['Rank', 'Mean', 'Trimmed', 'Median', 'StDev', 'AP', 'DES', 'USA']
 
@@ -43,7 +43,7 @@ def games():
 def latest_ranking(ranking_dates):
     latest_date = ranking_dates[-1]
     date_string = latest_date.strftime("%Y%m%d")
-    ranking_filename = './data/compare_' + date_string + '.csv'
+    ranking_filename = './data/massey_csv_original/compare_' + date_string + '.csv'
     ranking_df = pandas.read_csv(ranking_filename, index_col=0)
     ranking_df = ranking_df.rename(columns=lambda x: x.strip(), index=lambda x: x.strip())
 
@@ -53,7 +53,7 @@ def latest_ranking(ranking_dates):
 def rankings(ranking_dates):
     for ranking_date in ranking_dates:
         date_string = ranking_date.strftime("%Y%m%d")
-        ranking_filename = './data/compare_' + date_string + '.csv'
+        ranking_filename = './data/massey_csv_original/compare_' + date_string + '.csv'
         ranking_df = pandas.read_csv(ranking_filename, index_col=0)
         ranking_df = ranking_df.rename(columns=lambda x: x.strip(), index=lambda x: x.strip())
 
@@ -123,12 +123,15 @@ def predictive_accuracy(systems, games, ranking_dates):
 
         if days > 7:
             print(date)
-            ranking_date, ranking_df = next(ranking_gen)
+            try:
+                ranking_date, ranking_df = next(ranking_gen)
 
 
-            counts.append([x / week_games for x in week_correct])
-            week_games = 0
-            week_correct = [0 for x in week_correct]
+                counts.append([x / week_games for x in week_correct])
+                week_games = 0
+                week_correct = [0 for x in week_correct]
+            except:
+                print("n")
 
         week_games += 1
         total_games += 1

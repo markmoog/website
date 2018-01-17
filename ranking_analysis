@@ -14,15 +14,15 @@
         <!-- Navbar -->
         <nav class="navbar bg-dark navbar-expand-sm navbar-dark">
             <div class="container">
-                <a class="navbar-brand" href="../index.html"><img src="/img/logo.svg" width="60" height="30" alt=""></a>
+                <a class="navbar-brand" href="/"><img src="/img/logo.svg" width="60" height="30" alt=""></a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarLinks" aria-controls="navbarLinks" aria-expanded="true" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarLinks">
-                    <ul class="navbar-nav mr-auto">
-                        <li><a class="nav-link" href="ranking_analysis.html">Ranking Analysis</a></li>
-                        <li><a class="nav-link" href="ratings.html">Ratings</a></li>
-                        <li><a class="nav-link" href="win_trees.html">Win Trees</a></li>
+                    <ul class="navbar-nav align-bottom">
+                        <li><a class="nav-link" href="/ranking_analysis">Ranking Analysis</a></li>
+                        <li><a class="nav-link" href="/ratings">Ratings</a></li>
+                        <li><a class="nav-link" href="/win_trees">Win Trees</a></li>
                     </ul>
                 </div>
             </div>
@@ -38,7 +38,7 @@
                 </div>
             </section>
             <p></p>
-            <p class='text-center'>Includes games through 01/13/18</p>
+            <p class='text-center'>Includes games through 01/15/18</p>
             <div class="vis text-center" id="vis"></div>
             <div class="container text-muted text-center">
                 <small><p>Created with data from <a href="https://www.mratings.com/cb/compare.htm">Kenneth Massey</a>.</p>
@@ -47,10 +47,9 @@
             <div class="col-lg-6 mx-auto">
                 <div class="card accordion">
                     <a class="card-header text-center collapsed" data-toggle="collapse" href="#legend" aria-expanded="false" aria-controls="legend">Ranking Key and Info</a>
-                    </div>
-                    <div id="legend" class="collapse">
-                        <div class="card-block legend">
-                        </div>
+                </div>
+                <div id="legend" class="collapse">
+                    <div class="card-block legend">
                     </div>
                 </div>
             </div>
@@ -67,9 +66,9 @@
         <footer>
             <ul class="bottom_ul">
                 <li>&copy;2017-<script>document.write(new Date().getFullYear());</script></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="legal.html">Terms of Use</a></li>
+                <li><a href="/about">About</a></li>
+                <li><a href="/contact">Contact</a></li>
+                <li><a href="/legal">Terms of Use</a></li>
             </ul>
         </footer>
         <!-- CSS -->
@@ -84,8 +83,8 @@
         <!-- Table Sorting -->
         <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs4/dt-1.10.16/datatables.min.css"/>
         <script type="text/javascript" src="https://cdn.datatables.net/v/bs4/dt-1.10.16/datatables.min.js"></script>
-        <link href="../css/styles.css" rel="stylesheet">
+        <link href="/css/styles.css" rel="stylesheet">
         <!-- Custom JS -->
-        <script type="text/javascript" src="../js/ranking_analysis.js"></script>
+        <script type="text/javascript" src="/js/ranking_analysis.js"></script>
     </body>
 </html>

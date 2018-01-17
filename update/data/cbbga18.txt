@@ -3332,3 +3332,54 @@
 01/13/2018 Furman                  70 Wofford                 79    
 01/13/2018 Colorado St.            78 Wyoming                 73    
 01/13/2018 Creighton               70 Xavier                  92    
+01/14/2018 Monmouth                79 Canisius                94    
+01/14/2018 Houston                 65 East Carolina           49    
+01/14/2018 Davidson                75 Fordham                 45    
+01/14/2018 Boston University       54 Holy Cross              40    
+01/14/2018 Northwestern            46 Indiana                 66    
+01/14/2018 Rider                   64 Iona                    91    
+01/14/2018 American                66 Lehigh                  76    
+01/14/2018 Lafayette               77 Loyola MD               83    
+01/14/2018 Saint Joseph's          69 Massachusetts           72    
+01/14/2018 Indiana St.             73 Missouri St.            76    
+01/14/2018 Army                    64 Navy                    62    
+01/14/2018 Saint Peter's           70 Niagara                 73    
+01/14/2018 Ohio St.                68 Rutgers                 46    
+01/14/2018 Utah                    67 USC                     84    
+01/14/2018 North Carolina St.      51 Virginia                68    
+01/15/2018 Alcorn St.              59 Arkansas Pine Bluff     71    
+01/15/2018 Oklahoma St.            60 Baylor                  76    
+01/15/2018 Albany                  66 Binghamton              79    
+01/15/2018 Florida St.             75 Boston College          81    
+01/15/2018 Bucknell                63 Colgate                 51    
+01/15/2018 Delaware St.            89 Florida A&M             94 2  
+01/15/2018 Texas Southern          78 Grambling St.           79    
+01/15/2018 Milwaukee               92 Green Bay               99 1  
+01/15/2018 Presbyterian            49 High Point              73    
+01/15/2018 Oakland                 78 Illinois Chicago        68    
+01/15/2018 Prairie View A&M        71 Jackson St.             79    
+01/15/2018 Campbell                62 Longwood                76    
+01/15/2018 DePaul                  52 Marquette               70    
+01/15/2018 Chattanooga             71 Mercer                  75 1  
+01/15/2018 Duke                    83 Miami FL                75    
+01/15/2018 Maryland                67 Michigan                68    
+01/15/2018 Southern                78 Mississippi Valley St.  70 1  
+01/15/2018 Illinois                63 Nebraska                64    
+01/15/2018 Elizabeth City St.      76 Norfolk St.             67    
+01/15/2018 Coppin St.              47 North Carolina A&T      60    
+01/15/2018 Morgan St.              63 North Carolina Central  77    
+01/15/2018 Cleveland St.           55 Northern Kentucky       70    
+01/15/2018 Minnesota               95 Penn St.                84 1  
+01/15/2018 Butler                  60 Providence              70    
+01/15/2018 Liberty                 57 Radford                 59 1  
+01/15/2018 Howard                  90 Savannah St.            91    
+01/15/2018 Maryland Eastern Shore  62 South Carolina St.      66    
+01/15/2018 Bethune Cookman         74 Stetson                 62    
+01/15/2018 New Hampshire           74 UMass Lowell            62    
+01/15/2018 Hartford                56 UMBC                    78    
+01/15/2018 Charleston Southern     73 UNC Asheville           83    
+01/15/2018 Maine                   62 Vermont                 83    
+01/15/2018 Kansas                  71 West Virginia           66    
+01/15/2018 VMI                     58 Western Carolina        65    
+01/15/2018 Gardner Webb            67 Winthrop                90    
+01/15/2018 Youngstown St.          67 Wright St.              77    

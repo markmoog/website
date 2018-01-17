@@ -9,15 +9,15 @@
         <!-- Navbar -->
         <nav class="navbar bg-dark navbar-expand-sm navbar-dark">
             <div class="container">
-                <a class="navbar-brand" href="../index.html"><img src="/img/logo.svg" width="60" height="30" alt=""></a>
+                <a class="navbar-brand" href="/"><img src="/img/logo.svg" width="60" height="30" alt=""></a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarLinks" aria-controls="navbarLinks" aria-expanded="true" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarLinks">
-                    <ul class="navbar-nav mr-auto">
-                        <li><a class="nav-link" href="ranking_analysis.html">Ranking Analysis</a></li>
-                        <li><a class="nav-link" href="ratings.html">Ratings</a></li>
-                        <li><a class="nav-link" href="win_trees.html">Win Trees</a></li>
+                    <ul class="navbar-nav align-bottom">
+                        <li><a class="nav-link" href="/ranking_analysis">Ranking Analysis</a></li>
+                        <li><a class="nav-link" href="/ratings">Ratings</a></li>
+                        <li><a class="nav-link" href="/win_trees">Win Trees</a></li>
                     </ul>
                 </div>
             </div>
@@ -49,14 +49,14 @@
         <footer>
             <ul class="bottom_ul">
                 <li>&copy;2017-<script>document.write(new Date().getFullYear());</script></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="legal.html">Terms of Use</a></li>
+                <li><a href="/about">About</a></li>
+                <li><a href="/contact">Contact</a></li>
+                <li><a href="/legal">Terms of Use</a></li>
             </ul>
         </footer>
         <!-- CSS -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
-        <link href="../css/styles.css" rel="stylesheet">
+        <link href="/css/styles.css" rel="stylesheet">
         <!-- Bootstrap -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
