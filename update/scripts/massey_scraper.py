@@ -5,7 +5,7 @@ import csv
 
 # os.environ['NO_PROXY'] = 'localhost'
 
-url = 'https://www.masseyratings.com/cb/arch/compare2018-9.htm'
+url = 'https://www.masseyratings.com/cb/compare.htm'
 # url = 'https://www.masseyratings.com/cb/compare.htm'
 raw_html = requests.get(url)
 soup = BeautifulSoup(raw_html.text, 'html5lib')

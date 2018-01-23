@@ -4,7 +4,7 @@ var highlight_teams = []
 
 $( function() {
     set_year(2018)
-    var teams_path = '../data/win_trees/teams.json'
+    var teams_path = '/data/win_trees/teams.json'
 
     var xobj = new XMLHttpRequest();
     xobj.overrideMimeType("application/json");
@@ -28,23 +28,9 @@ function set_year(year){
     document.getElementById("yearSelector").innerHTML=year
 }
 
-function load_ratings(year){
-    var edge_path = '../data/ratings/ratings_' + year + '.csv'
-    var xobj = new XMLHttpRequest();
-    xobj.overrideMimeType("application/json");
-    xobj.open('GET', edge_path, true);
-    xobj.onreadystatechange = function () {
-        if (xobj.readyState == 4 && xobj.status == "200") {
-            var edges = JSON.parse(xobj.responseText)
-            generate(edges, teams);
-        }
-    };
-    xobj.send(null);
-}
-
 function load_edges() {
     var year = document.getElementById("yearSelector").innerHTML
-    var edge_path = '../data/win_trees/edges' + year + '.json'
+    var edge_path = '/data/win_trees/edges' + year + '.json'
 
     var xobj = new XMLHttpRequest();
     xobj.overrideMimeType("application/json");
@@ -61,6 +47,7 @@ function load_edges() {
 function generate(edges, teams){
     var root_team = document.getElementById('team_selection').value
     var highlight_text = document.getElementById('highlight_selection').value
+
     highlight_teams = []
     for (var i in highlight_text.split(',')){
         highlight_teams.push(highlight_text.split(',')[i].trim())
@@ -208,13 +195,13 @@ function vegafy_root(node, vega_tree, display_size){
 }
 
 function update_vega(nodes, links, highlight_links, display_size){
-    var spec = "../vega/basketball_tree.json"
+    var spec = "/vega/basketball_tree.json"
     var dimesnion = 0
 
     var chkBox = document.getElementById('large_image');
     if (chkBox.checked){
         dimension = display_size
-        spec = "../vega/basketball_tree_large.json"
+        spec = "/vega/basketball_tree_large.json"
     }else{
         var vega_div = document.getElementById('vis');
         var position_info = vega_div.getBoundingClientRect();

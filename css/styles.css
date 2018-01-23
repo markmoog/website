@@ -1,3 +1,7 @@
+.missing-data {
+   color: #f55;
+}
+
 .jumbotron {
   margin-top: 1rem;
   padding-bottom: 2rem;
@@ -12,6 +16,16 @@
 table.dataTable {
   border-collapse: collapse !important;
 }
+
+.dataTable > thead > tr > th[class*="sort"]:after,
+.dataTable > thead > tr > th[class*="sort"]:before {
+    vertical-align: middle !important;
+}
+
+.table th {
+    vertical-align: middle !important;
+}
+
 
 .accordion .card-header:after {
     font-family: 'FontAwesome';

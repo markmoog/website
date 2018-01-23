@@ -4,14 +4,11 @@
         <title>Ranking Analysis</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/4.1.2/papaparse.js"></script>
-        <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-        <script type="text/javascript" charset="utf8" src="//cdn.datatables.net/1.10.16/js/jquery.dataTables.js"></script>
         <!-- Icon Font -->
         <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
     </head>
     <body>
-        <!-- Navbar -->
+       <!-- Navbar -->
         <nav class="navbar bg-dark navbar-expand-sm navbar-dark">
             <div class="container">
                 <a class="navbar-brand" href="/"><img src="/img/logo.svg" width="60" height="30" alt=""></a>
@@ -38,13 +35,30 @@
                 </div>
             </section>
             <p></p>
-            <p class='text-center'>Includes games through 01/15/18</p>
-            <div class="vis text-center" id="vis"></div>
-            <div class="container text-muted text-center">
-                <small><p>Created with data from <a href="https://www.mratings.com/cb/compare.htm">Kenneth Massey</a>.</p>
-                </small>
+            <div class="text-center">
+                <p class="h5">Select Date range for Analysis</p>
+                <div class="btn-group">
+                    <p class="my-auto">Starting on </p>
+                    <div class="dropdown" id="start-select">
+                        <button class="btn btn-sm btn-outline-secondary dropdown-toggle mx-1" id="start-date" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
+                    </div>
+                </div>
+                <div class="btn-group">
+                    <p class="my-auto">Through week of</p>
+                    <div class="dropdown" id="end-select">
+                        <button class="btn btn-sm btn-outline-secondary dropdown-toggle mx-1" id="end-date" type="button" id="end_date" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        </button>
+                    </div>
+                </div>
+                <button class="btn btn-sm btn-success" type="button" id="generate" onclick="update_accuracy()">Go!</button>
             </div>
-            <div class="col-lg-6 mx-auto">
+            <p class='text-center text-muted'><small>Includes results through 01/21/18</small></p>
+            <p></p>
+            <div class="vis text-center" id="vis"></div>
+            <div class="mx-auto" style="width: 500px">
+                <input id="checkbox-hide" type="checkbox" checked autocomplete="off" onclick="update_accuracy()" data-toggle='collapse' data-target='#missing-data-alert'> Hide incomplete rankings</input>
+                <p class="text-muted"><small>Different algorithms release initial rankings at different points in the season. If an algorithm's initial release is after the selected start date the algorithm is hidden form the plot and table by default. Click the above checkbox to show the missing algorithms.</small></p>
+                <div class="alert alert-danger collapse" id="missing-data-alert"><small><font color="#f55">Red</font> indicates the algorithm's initial release is after the starting date of the date range selected for analysis. Comparing the predictive accuracy of these rankings over this selected date range is not suggested.</small></div>
                 <div class="card accordion">
                     <a class="card-header text-center collapsed" data-toggle="collapse" href="#legend" aria-expanded="false" aria-controls="legend">Ranking Key and Info</a>
                 </div>
@@ -56,35 +70,31 @@
             <br>
             <p>The <b>retrodictive accuracy</b> of a ranking system is the fraction of games that were played before the ranking was released where the higher ranked team won. Retrodictive accuracy is updated weekly using rankings compiled by <a href="https://www.mratings.com/cb/compare.htm">Massey</a>.</p>
             <p>The <b>predictive accuracy</b> of a ranking system is the fraction of games played after the ranking is released where the higher ranked team won. To calculate the predictive accuracy of ranking systems, rankings are downloaded from <a href="https://www.mratings.com/cb/compare.htm">Massey</a> at the beginning of the week and used to predict the result of the week's games. A cumulative total of all games predicted correctly through all weeks is divided by the total number of games played to get the predictive accuracy of each system. SInce it is difficult to create a predictive ranking system at the beginning of the season when there is little data, only games after roughly 5 weeks into the season (games after 12/17/17) are considered for this analysis.</p>
-            <p>Since the rankings used for this analysis are only updated once a week and do not take into account home court advantage and other factors that ranking systems often adjust for, this analysis is not fully representative of the included systems' accuracies.</p>
-            <div class="predictive_trend">
-            </div>
-            <div class="retrodictive_trend">
-            </div>
+            <p>Since the rankings used for this analysis are only updated once a week and do not take into account home court advantage and other factors that ranking systems may adjust for, this analysis is not fully representative of the included systems' accuracies.</p>
         </div>
         <hr>
         <footer>
             <ul class="bottom_ul">
                 <li>&copy;2017-<script>document.write(new Date().getFullYear());</script></li>
-                <li><a href="/about">About</a></li>
-                <li><a href="/contact">Contact</a></li>
-                <li><a href="/legal">Terms of Use</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="legal.html">Terms of Use</a></li>
             </ul>
         </footer>
-        <!-- CSS -->
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
         <!-- Bootstrap -->
-        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-        <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js" integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
         <!-- Vega -->
         <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vega/3.0.7/vega.min.js"></script>
         <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vega-embed/3.0.0-beta.20/vega-embed.js"></script>
         <!-- Table Sorting -->
         <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs4/dt-1.10.16/datatables.min.css"/>
         <script type="text/javascript" src="https://cdn.datatables.net/v/bs4/dt-1.10.16/datatables.min.js"></script>
-        <link href="/css/styles.css" rel="stylesheet">
         <!-- Custom JS -->
         <script type="text/javascript" src="/js/ranking_analysis.js"></script>
+        <!-- CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link href="/css/styles.css" rel="stylesheet">
     </body>
 </html>

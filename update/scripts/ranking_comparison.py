@@ -7,17 +7,10 @@ import datetime
 import json
 
 # constants and initializations
-ranking_dates = [datetime.date(2017,12,17), datetime.date(2017,12,24), datetime.date(2017,12,31), datetime.date(2018,1,7), datetime.date(2018,1,14)]
-systems = ['ARG', 'BBT', 'BUR', 'BWE', 'COL', 'DAV', 'DCI', 'DII', 'DOK', 'DOL', 'EBP', 'FAS', 'FMG', 'FSH', 'HAS', 'KPK', 'LOG', 'MAS', 'MMG', 'MOR', 'PGH', 'PIG', 'POM', 'PRR', 'RPI', 'RT', 'RTH', 'RTP', 'SAG', 'SEL', 'SGR', 'SMN', 'STH', 'TRK', 'TRP', 'WIL', 'WLK', 'WOL', 'YAG', 'ZAM']
-header_blacklist = ['Rank', 'Mean', 'Trimmed', 'Median', 'StDev', 'AP', 'DES', 'USA']
+ranking_dates = [datetime.date(2017,11,12), datetime.date(2017,11,19), datetime.date(2017,11,26), datetime.date(2017,12,3), datetime.date(2017,12,10), datetime.date(2017,12,17), datetime.date(2017,12,24), datetime.date(2017,12,31), datetime.date(2018,1,7), datetime.date(2018,1,14), datetime.date(2018,1,21)]
+header_blacklist = ['', 'Conf', 'WL', 'Rank', 'Mean', 'Trimmed', 'Median', 'StDev', 'AP', 'DES', 'USA']
 
 teams = []
-retrodictive_counts = []
-predictive_counts = []
-
-for s in systems:
-    retrodictive_counts.append(0)
-    predictive_counts.append(0)
 
 with open('./data/massey_teams.csv', 'r') as f:
     reader = csv.reader(f)
@@ -43,7 +36,7 @@ def games():
 def latest_ranking(ranking_dates):
     latest_date = ranking_dates[-1]
     date_string = latest_date.strftime("%Y%m%d")
-    ranking_filename = './data/massey_csv_original/compare_' + date_string + '.csv'
+    ranking_filename = './data/massey_' + date_string + '.csv'
     ranking_df = pandas.read_csv(ranking_filename, index_col=0)
     ranking_df = ranking_df.rename(columns=lambda x: x.strip(), index=lambda x: x.strip())
 
@@ -53,21 +46,30 @@ def latest_ranking(ranking_dates):
 def rankings(ranking_dates):
     for ranking_date in ranking_dates:
         date_string = ranking_date.strftime("%Y%m%d")
-        ranking_filename = './data/massey_csv_original/compare_' + date_string + '.csv'
+        ranking_filename = './data/massey_' + date_string + '.csv'
         ranking_df = pandas.read_csv(ranking_filename, index_col=0)
         ranking_df = ranking_df.rename(columns=lambda x: x.strip(), index=lambda x: x.strip())
 
         yield ranking_date, ranking_df
 
 
-def retrodictive_accuracy(systems, games, ranking_dates):
-    week_correct = [0] * len(systems)
+def retrodictive_accuracy(games, ranking_dates):
     data = []
-
+    current_ranking = {}
+    week_correct = {}
     game_count = 0
 
     # calculate the retrodictive accuracy
     for ranking_date, ranking_df in rankings(ranking_dates):
+        # this allows us to use an algorithm's ranking from previous weeks if its current ranking is unavailable
+        for system in ranking_df.columns.values.tolist():
+            if system not in header_blacklist:
+                current_ranking[system] = ranking_df[system]
+
+        week_correct = {system: 0 for system in current_ranking.keys()}
+
+        # Currently looping through all games every week, consider changing it
+        # so games are only looped through once if this starts taking too long.
         for game_tuple in games.iterrows():
             game_data = game_tuple[1]
 
@@ -79,34 +81,41 @@ def retrodictive_accuracy(systems, games, ranking_dates):
             days = (date - datetime.datetime.combine(ranking_dates[-1], datetime.time())).days
 
             if days >= 0:
-                data.append([x / game_count for x in week_correct])
-                week_correct = [0 for x in week_correct]
+                data.append({system: correct / game_count for system, correct in week_correct.items()})
                 game_count = 0
                 break
 
             game_count += 1
 
-            for i, sys in enumerate(systems):
-                rank = ranking_df[sys]
-                ranking_prediction = ranking_df[sys][team2] - ranking_df[sys][team1]
+            for system, ranking in current_ranking.items():
+                try:
+                    ranking_prediction = ranking[team2] - ranking[team1]
+                except:
+                    print(system, team1, team2)
+                    break
 
                 if ranking_prediction * margin >= 0:
-                    week_correct[i] += 1
+                    week_correct[system] += 1
 
     return data
 
 
-def predictive_accuracy(systems, games, ranking_dates):
-    total_correct = [0] * len(systems)
-    week_correct = [0] * len(systems)
-    counts = []
+def predictive_accuracy(games, ranking_dates):
+    # the number of correctly predicted games for the week for each system
+    games_correct = []
 
-    total_games = 0
-    week_games = 0
+    # number of total games in a given week
+    games_total = []
+
+    # incrementer for games in a week
+    game_inc = 0
 
     # load the initial ranking data
     ranking_gen = rankings(ranking_dates)
     ranking_date, ranking_df = next(ranking_gen)
+    current_ranking = {system: ranking_df[system] for system in ranking_df.columns.values.tolist() if system not in header_blacklist}
+
+    week_correct = {system: 0 for system in current_ranking.keys()}
 
     for game_tuple in game_df.iterrows():
         game_data = game_tuple[1]
@@ -123,66 +132,58 @@ def predictive_accuracy(systems, games, ranking_dates):
 
         if days > 7:
             print(date)
+            games_correct.append(week_correct)
+            games_total.append(game_inc)
+
+            game_inc = 0
+
+            # load next set of rankings and update the current_rankings dictionary with the new rankings
+            ranking_date, ranking_df = next(ranking_gen)
+            for system in ranking_df.columns.values.tolist():
+                if system not in header_blacklist:
+                    current_ranking[system] = ranking_df[system]
+
+            # reset the number of correct games picked this week, we are starting a new week
+            week_correct = {system: 0 for system in current_ranking.keys()}
+
+        game_inc += 1
+
+        for system, ranking in current_ranking.items():
             try:
-                ranking_date, ranking_df = next(ranking_gen)
-
-
-                counts.append([x / week_games for x in week_correct])
-                week_games = 0
-                week_correct = [0 for x in week_correct]
+                ranking_prediction = ranking[team2] - ranking[team1]
             except:
-                print("n")
-
-        week_games += 1
-        total_games += 1
-
-        for i, sys in enumerate(systems):
-            rank = ranking_df[sys]
-            ranking_prediction = ranking_df[sys][team2] - ranking_df[sys][team1]
+                print("Error with system: " + system)
+                print(ranking[team2])
 
             if ranking_prediction * margin > 0:
-                week_correct[i] += 1
-                total_correct[i] += 1
+                week_correct[system] += 1
 
-    total_correct = [x / total_games for x in total_correct]
+    if game_inc > 0:
+        games_correct.append(week_correct)
+        games_total.append(game_inc)
 
-    if week_games > 0:
-        counts.append([x / week_games for x in week_correct])
-    else:
-        counts.append([0.0 for x in week_correct])
+    return games_correct, games_total
 
-    return total_correct, counts
+def generate_dictionary(dates, games_total, predict_correct, retro_accuracy):
+    return_dict = []
 
-def generate_dictionary(systems, dates, retro_weekly, retro_total, predict_weekly, predict_total):
-    return_dict = {'total': [], 'weekly': {'predictive': [], 'retrodictive': []}}
+    for date, num_games, correct_dict, retro_dict in zip(dates, games_total, predict_correct, retro_accuracy):
+        system_performance = {}
+        for system in correct_dict.keys():
+            correct = correct_dict[system]
+            retro_acc = retro_dict[system]
+            system_performance[system] = [correct,retro_acc]
 
-    total = return_dict['total']
-
-    for s, rt, pt in zip(systems, retro_total, predict_total):
-        total.append({'system': s, 'retro_acc': rt, 'predict_acc': pt})
-
-    retro_list = return_dict['weekly']['retrodictive']
-    predict_list = return_dict['weekly']['predictive']
-
-    for rw, pw, date in zip(retro_weekly, predict_weekly, dates):
-        temp_dr = {'date': date.strftime('%Y-%m-%d')}
-        temp_dp = {'date': date.strftime('%Y-%m-%d')}
-
-        for s, rt, pt in zip(systems, rw, pw):
-            temp_dr[s] = rt
-            temp_dp[s] = pt
-
-        retro_list.append(temp_dr)
-        predict_list.append(temp_dp)
+        week_data = {'date': date.strftime('%m/%d/%Y'), 'num_games': num_games, 'systems': system_performance}
+        return_dict.append(week_data)
 
     return return_dict
 
-
 game_df = games()
-r_week = retrodictive_accuracy(systems, game_df, ranking_dates)
-p_tot, p_week = predictive_accuracy(systems, game_df, ranking_dates)
 
-output_json = generate_dictionary(systems, ranking_dates, r_week, r_week[-1], p_week, p_tot)
+retro_accuracy = retrodictive_accuracy(game_df, ranking_dates)
+predict_correct, games_total = predictive_accuracy(game_df, ranking_dates)
+output_json = generate_dictionary(ranking_dates, games_total, predict_correct, retro_accuracy)
 
 with open('ranking_analysis.json', 'w') as output_file:
     json.dump(output_json, output_file)

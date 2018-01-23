@@ -13,16 +13,22 @@
     {
       "name": "x",
       "type": "linear",
-      "domain": {"data": "total", "field": "predict_acc"},
+      "domain": {"data": "total", "field": "predictive_accuracy"},
       "zero": false,
       "range": "width"
     },
     {
       "name": "y",
       "type": "linear",
-      "domain": {"data": "total", "field": "retro_acc"},
+      "domain": {"data": "total", "field": "retrodictive_accuracy"},
       "zero": false,
       "range": "height"
+    },
+     {
+      "name": "color",
+      "type": "ordinal",
+      "domain": ["True", "False"],
+      "range": ["#4682B4", "#f55"]
     }
   ],
   "axes": [
@@ -73,13 +79,13 @@
       "from": {"data": "total"},
       "encode": {
         "enter": {
-          "text": {"field": "system"},
+          "text": {"field": "abbreviation"},
           "fontSize": {"value": 12},
           "baseline": {"value": "middle"}
         },
         "update": {
-          "x": {"scale": "x", "field": "predict_acc"},
-          "y": {"scale": "y", "field": "retro_acc"},
+          "x": {"scale": "x", "field": "predictive_accuracy"},
+          "y": {"scale": "y", "field": "retrodictive_accuracy"},
           "dx": {"value": 5}
         }
       }
@@ -94,11 +100,11 @@
         "enter": {
           "x": {
             "scale": "x",
-            "field": "predict_acc"
+            "field": "predictive_accuracy"
           },
           "y": {
             "scale": "y",
-            "field": "retro_acc"
+            "field": "retrodictive_accuracy"
           },
           "size": {
             "value": 100
@@ -107,7 +113,8 @@
             "value": "circle"
           },
           "fill": {
-            "value": "#4682B4"
+            "scale": "color",
+            "field": "missing_data"
           }
         }
       }
