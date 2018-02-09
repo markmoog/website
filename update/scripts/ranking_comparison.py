@@ -7,8 +7,8 @@ import datetime
 import json
 
 # constants and initializations
-ranking_dates = [datetime.date(2017,11,12), datetime.date(2017,11,19), datetime.date(2017,11,26), datetime.date(2017,12,3), datetime.date(2017,12,10), datetime.date(2017,12,17), datetime.date(2017,12,24), datetime.date(2017,12,31), datetime.date(2018,1,7), datetime.date(2018,1,14), datetime.date(2018,1,21)]
-header_blacklist = ['', 'Conf', 'WL', 'Rank', 'Mean', 'Trimmed', 'Median', 'StDev', 'AP', 'DES', 'USA']
+ranking_dates = [datetime.date(2017,11,12), datetime.date(2017,11,19), datetime.date(2017,11,26), datetime.date(2017,12,3), datetime.date(2017,12,10), datetime.date(2017,12,17), datetime.date(2017,12,24), datetime.date(2017,12,31), datetime.date(2018,1,7), datetime.date(2018,1,14), datetime.date(2018,1,21), datetime.date(2018,1,28), datetime.date(2018,2,4)]
+header_blacklist = ['', 'Conf', 'WL', 'Rank', 'Mean', 'Trimmed', 'Median', 'StDev', 'AP', 'DES', 'USA', 'BNT']
 
 teams = []
 

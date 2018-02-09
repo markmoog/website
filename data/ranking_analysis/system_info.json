@@ -1,0 +1,322 @@
+{
+  "7OT": [
+    "Seven OT",
+    "http://sevenovertimes.com",
+    12
+  ],
+  "AP": [
+    "Associated Press",
+    "http://rivals.yahoo.com/ncaa/basketball/polls?poll=1",
+    0
+  ],
+  "ARG": [
+    "ARGH",
+    "http://www.arghratings.com",
+    4
+  ],
+  "BBT": [
+    "Baker Bradley-Terry",
+    "http://dbaker.5-1webs.com",
+    2
+  ],
+  "BIH": [
+    "Bihl",
+    "http://jeffbihl.com/bwin.html",
+    6
+  ],
+  "BLS": [
+    "BVL Least Squares",
+    "http://lsratings.com",
+    6
+  ],
+  "BNT": [
+    "Bennett",
+    "https://herosports.com/rankings/college-basketball",
+    9
+  ],
+  "BUR": [
+    "Burrus",
+    "https://sites.google.com/site/burrushoops",
+    3
+  ],
+  "BWE": [
+    "B Wilson Empirical",
+    "http://www.buzzplugg.com/bryan/ncaabRankings.php",
+    0
+  ],
+  "CNG": [
+    "Cheong",
+    "http://www.raymondcheong.com/rankings",
+    12
+  ],
+  "COL": [
+    "Colley",
+    "http://www.colleyrankings.com",
+    3
+  ],
+  "COX": [
+    "Cox",
+    "http://bjc6496.wixsite.com/home/cbb-ratings",
+    11
+  ],
+  "DAV": [
+    "Davis",
+    "http://www.rockchalk.com",
+    4
+  ],
+  "DC2": [
+    "Daniel Curry 2",
+    "http://dcindex-choop.blogspot.com/search/label/DC2%20Rank",
+    10
+  ],
+  "DCI": [
+    "Daniel Curry Index",
+    "http://dcindex-choop.blogspot.com/search/label/DCI%2-1Rank",
+    4
+  ],
+  "DES": [
+    "DeSimone",
+    "http://www.mikedesimone.com/top25b.htm",
+    1
+  ],
+  "DII": [
+    "Donchess Inference",
+    "http://www.dratings.com",
+    0
+  ],
+  "DOK": [
+    "Dokter Entropy",
+    "http://www.timetravelsports.com/colbb.html",
+    0
+  ],
+  "DOL": [
+    "Dolphin",
+    "http://www.dolphinsim.com/ratings/ncaa_mbb",
+    3
+  ],
+  "DUN": [
+    "Dunkel",
+    "http://www.dunkelindex.com",
+    5
+  ],
+  "EBP": [
+    "ESPN BPI",
+    "http://espn.go.com/mens-college-basketball/bpi",
+    0
+  ],
+  "ESR": [
+    "ESPN SOR",
+    "http://www.espn.com/mens-college-basketball/bpi",
+    7
+  ],
+  "FAS": [
+    "Ford AMSTS",
+    "http://www.allmysportsteamssuck.com/ncaa-college-basketball-rankings",
+    2
+  ],
+  "FMG": [
+    "Fleming",
+    "http://minkeynet.net/~pfleming/fcfcr",
+    4
+  ],
+  "FSH": [
+    "Forseth ERFunction",
+    "http://erikforseth.com",
+    2
+  ],
+  "HAS": [
+    "Haslametrics",
+    "http://haslametrics.com",
+    4
+  ],
+  "JNG": [
+    "Joby Nitty Gritty",
+    "http://hoopshd.com/nitty-gritty-rankings",
+    8
+  ],
+  "KPI": [
+    "KPI Sports",
+    "http://www.kpisports.net/d-i_mbb",
+    12
+  ],
+  "KPK": [
+    "Kirkpatrick",
+    "http://talismanred.com/ratings/ckhoops",
+    2
+  ],
+  "KRA": [
+    "Krach",
+    "http://sports.vaporia.com/collegebasketballkrach.html",
+    9
+  ],
+  "LMC": [
+    "LRMC",
+    "http://www.lrmc.gatech.edu",
+    8
+  ],
+  "LOG": [
+    "Logan",
+    "http://loganssportsratings.blogspot.com",
+    3
+  ],
+  "MAS": [
+    "Massey",
+    "http://www.masseyratings.com/cb/ncaa-d1/ratings",
+    0
+  ],
+  "MMG": [
+    "Mark Moog",
+    "http://www.markmoog.com",
+    2
+  ],
+  "MOR": [
+    "Moore",
+    "http://sonnymoorepowerratings.com",
+    0
+  ],
+  "PGH": [
+    "Pugh",
+    "http://www.compughterratings.com/CBB/rankings",
+    0
+  ],
+  "PIG": [
+    "Pigskin",
+    "http://powerratings.com/cbasket.htm",
+    0
+  ],
+  "POM": [
+    "Pomeroy",
+    "http://www.kenpom.com/rate.php",
+    0
+  ],
+  "PRR": [
+    "Peer Rankings",
+    "https://hoopsrankings.com",
+    2
+  ],
+  "REW": [
+    "Rewards",
+    "http://academics.smcvt.edu/jtrono/RewardNCAA_Bball.htm",
+    11
+  ],
+  "RPI": [
+    "RPI",
+    "http://www.ncaa.com/rankings/basketball-men/d1/ncaa-mens-basketball-rpi",
+    4
+  ],
+  "RT": [
+    "RoundTable",
+    "http://www.rtsratings.com",
+    2
+  ],
+  "RTH": [
+    "Rothman",
+    "http://prwolfe.bol.ucla.edu/cbasketball/rothman.txt",
+    4
+  ],
+  "RTP": [
+    "RT Power",
+    "http://realtimerpi.com/ncaab/college_Men_basketball_power_rankings_Full.html",
+    0
+  ],
+  "SAG": [
+    "Sagarin",
+    "http://www.usatoday.com/sports/ncaab/sagarin",
+    0
+  ],
+  "SEL": [
+    "Self",
+    "https://raw.github.com/jeffself/collegebasketballrankings/master/cbrank2-118.txt",
+    4
+  ],
+  "SFX": [
+    "Stat Fox",
+    "http://www.statfox.com/cbb/power",
+    12
+  ],
+  "SGR": [
+    "Singer",
+    "https://docs.google.com/spreadsheets/d/e/2PACX-1vTt8UxjKAEIjcj_InZ1Ah_CIKJqlphKL7VPfsqWzJUFI1TIAvQXH6NFuHYjlDX88TkqqcVhZINYlzCm/pubhtml#",
+    5
+  ],
+  "SMN": [
+    "Seed Madness",
+    "http://www.seed-madness.com",
+    3
+  ],
+  "SMS": [
+    "Simmons",
+    "http://simmonsratings.com",
+    6
+  ],
+  "SP": [
+    "Sagarin Predictor",
+    "http://www.usatoday.com/sports/ncaab/sagarin",
+    7
+  ],
+  "SPR": [
+    "Sports ratings",
+    "http://www.sports-ratings.com/basketball/",
+    12
+  ],
+  "STH": [
+    "Sport Theory",
+    "http://sportheory.com",
+    5
+  ],
+  "TPR": [
+    "The Power Rank",
+    "http://thepowerrank.com/college-basketball",
+    12
+  ],
+  "TRK": [
+    "T-Rank",
+    "http://barttorvik.com",
+    0
+  ],
+  "TRP": [
+    "TeamRankings Pred",
+    "http://www.teamrankings.com/ncaa-basketball/ranking/predictive-by-other",
+    0
+  ],
+  "USA": [
+    "USA Today Coaches",
+    "http://sports.yahoo.com/ncaa/basketball/polls?poll=3",
+    0
+  ],
+  "WIL": [
+    "Wilson",
+    "http://talismanred.com/ratings/hoops",
+    2
+  ],
+  "WLK": [
+    "Whitlock",
+    "http://sawhitlock.home.mindspring.com",
+    3
+  ],
+  "WMV": [
+    "Wobus MOV",
+    "http://sports.vaporia.com/collegebasketballwmv.html",
+    9
+  ],
+  "WOB": [
+    "Wobus",
+    "http://sports.vaporia.com/collegebasketballrankings.html",
+    9
+  ],
+  "WOL": [
+    "Wolfe",
+    "http://prwolfe.bol.ucla.edu/cbasketball/ratings.htm",
+    4
+  ],
+  "YAG": [
+    "Yale USAG",
+    "http://sports.sites.yale.edu/ncaa-mens-basketball-power-rankings",
+    0
+  ],
+  "ZAM": [
+    "Zamstat",
+    "http://www.zamstat.com",
+    0
+  ]
+}

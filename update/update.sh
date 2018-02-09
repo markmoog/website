@@ -30,8 +30,6 @@ sed -i .bak "s/through [0-9]*\\/[0-9]*\\/[0-9]*/through $MONTH\\/$DAY\\/$YEAR/g"
 sed -i .bak "s/through [0-9]*\\/[0-9]*\\/[0-9]*/through $MONTH\\/$DAY\\/$YEAR/g" ../win_trees
 sed -i .bak "s/through [0-9]*\\/[0-9]*\\/[0-9]*/through $MONTH\\/$DAY\\/$YEAR/g" ../ranking_analysis
 
-
-
 echo "Uploading local changes to AWS"
 aws s3 cp --content-type 'text/html' ../ratings s3://www.markmoog.com/ratings
 aws s3 cp --content-type 'text/html' ../win_trees s3://www.markmoog.com/win_trees
@@ -39,9 +37,10 @@ aws s3 cp --content-type 'text/html' ../ranking_analysis s3://www.markmoog.com/r
 aws s3 cp ../data/ratings/ratings_2018.csv s3://www.markmoog.com/data/ratings/ratings_2018.csv
 aws s3 cp ../data/win_trees/edges2018.json s3://www.markmoog.com/data/win_trees/edges2018.json
 aws s3 cp ../data/ranking_analysis/ranking_analysis.json s3://www.markmoog.com/data/ranking_analysis/ranking_analysis.json
+aws s3 cp ../data/ranking_analysis/system_info.json s3://www.markmoog.com/data/ranking_analysis/system_info.json
 
 echo "Invalidating old files on CloudFront"
-aws cloudfront create-invalidation --distribution-id E2QBM02Z5J7Y5V --paths /ratings /win_trees /ranking_analysis /data/trees/edges2018.json /data/ratings/ratings_2018.csv /data/ranking_analysis/ranking_analysis.json
+aws cloudfront create-invalidation --distribution-id E2QBM02Z5J7Y5V --paths /ratings /win_trees /ranking_analysis /data/win_trees/edges2018.json /data/ratings/ratings_2018.csv /data/ranking_analysis/ranking_analysis.json /data/ranking_analysis/system_info.json
 
 echo "Cleaning up"
 rm output.csv
