@@ -7,8 +7,8 @@ import datetime
 import json
 
 # constants and initializations
-ranking_dates = [datetime.date(2017,11,12), datetime.date(2017,11,19), datetime.date(2017,11,26), datetime.date(2017,12,3), datetime.date(2017,12,10), datetime.date(2017,12,17), datetime.date(2017,12,24), datetime.date(2017,12,31), datetime.date(2018,1,7), datetime.date(2018,1,14), datetime.date(2018,1,21), datetime.date(2018,1,28), datetime.date(2018,2,4)]
-header_blacklist = ['', 'Conf', 'WL', 'Rank', 'Mean', 'Trimmed', 'Median', 'StDev', 'AP', 'DES', 'USA', 'BNT']
+ranking_dates = [datetime.date(2017,11,12), datetime.date(2017,11,19), datetime.date(2017,11,26), datetime.date(2017,12,3), datetime.date(2017,12,10), datetime.date(2017,12,17), datetime.date(2017,12,24), datetime.date(2017,12,31), datetime.date(2018,1,7), datetime.date(2018,1,14), datetime.date(2018,1,21), datetime.date(2018,1,28), datetime.date(2018,2,4), datetime.date(2018,2,11)]
+header_blacklist = ['', 'Conf', 'WL', 'Rank', 'Mean', 'Trimmed', 'Median', 'StDev', 'AP', 'DES', 'USA', 'BNT', 'REW', 'PGH', 'RT']
 
 teams = []
 
@@ -77,6 +77,12 @@ def retrodictive_accuracy(games, ranking_dates):
             team1 = game_data[2]
             team2 = game_data[5]
 
+            if team1 == "SIUE":
+                team1 = "Edwardsville"
+
+            if team2 == "SIUE":
+                team2 = "Edwardsville"
+
             date = datetime.datetime.strptime(game_data[0], '%Y-%m-%d')
             days = (date - datetime.datetime.combine(ranking_dates[-1], datetime.time())).days
 
@@ -123,6 +129,12 @@ def predictive_accuracy(games, ranking_dates):
         margin = game_data[3] - game_data[6]
         team1 = game_data[2]
         team2 = game_data[5]
+
+        if team1 == "SIUE":
+            team1 = "Edwardsville"
+
+        if team2 == "SIUE":
+            team2 = "Edwardsville"
 
         date = datetime.datetime.strptime(game_data[0], '%Y-%m-%d')
         days = (date - datetime.datetime.combine(ranking_date, datetime.time())).days

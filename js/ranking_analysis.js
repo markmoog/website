@@ -1,4 +1,5 @@
 var release_dates = []
+var end_dates = []
 var ranking_metadata = []
 var ranking_performance = []
 
@@ -16,9 +17,20 @@ function load_ranking_performance() {
         if (xobj.readyState == 4 && xobj.status == "200") {
             ranking_performance = JSON.parse(xobj.responseText)
 
+            var day = 24 * 60 * 60 * 1000
+            var yesterday = new Date(new Date().getTime() - day)
+
             // fill in date array
             for (var week in ranking_performance){
-                release_dates.push(ranking_performance[week].date)
+                end_date = new Date(new Date(ranking_performance[week].date).getTime() + 7*day)
+                start_date = new Date(new Date(ranking_performance[week].date).getTime() + day)
+
+                if (end_date > yesterday) {
+                    end_date = yesterday
+                }
+
+                release_dates.push(date_string(start_date))
+                end_dates.push(date_string(end_date))
             }
 
             populate_button(release_dates)
@@ -28,12 +40,20 @@ function load_ranking_performance() {
     xobj.send(null);
 }
 
+function date_string(date) {
+    var day = date.getDate()
+    var month = date.getMonth() + 1
+    var year = date.getFullYear()
+
+    return month + '/' + day + '/' + year
+}
+
 function populate_button(release_dates) {
     var dropdown_start = $('<div class="dropdown-menu" aria-labelledby="start-date"></div>')
     var dropdown_end = $('<div class="dropdown-menu" aria-labelledby="end-date"></div>')
     $(release_dates).each(function (i, date) {
         var selection_start = $('<button onclick="set_date(' + i + ', 0)" class="dropdown-item">' + date + '</button>')
-        var selection_end = $('<button onclick="set_date(' + i + ', 1)" class="dropdown-item">' + date + '</button>')
+        var selection_end = $('<button onclick="set_date(' + i + ', 1)" class="dropdown-item">' + end_dates[i] + '</button>')
 
         dropdown_start.append(selection_start)
         dropdown_end.append(selection_end)
@@ -178,8 +198,9 @@ function update_vega(calculated_accuracy) {
 
 function set_date(date_index, end) {
     var date = release_dates[date_index]
+    var end_date = end_dates[date_index]
     if (end == 0) { document.getElementById("start-date").innerHTML = date }
-    else { document.getElementById("end-date").innerHTML = date }
+    else { document.getElementById("end-date").innerHTML = end_date }
 }
 
 function update_accuracy() {
@@ -187,7 +208,7 @@ function update_accuracy() {
     var end_date = document.getElementById("end-date").innerHTML
 
     var start_index = release_dates.indexOf(start_date)
-    var end_index = release_dates.indexOf(end_date)
+    var end_index = end_dates.indexOf(end_date)
 
     if (start_index > end_index && end_index != -1) {
         console.log("Error: unusable range!!!!!")

@@ -28,12 +28,10 @@ MONTH=$(date -v -1d +%m)
 DAY=$(date -v -1d +%d)
 sed -i .bak "s/through [0-9]*\\/[0-9]*\\/[0-9]*/through $MONTH\\/$DAY\\/$YEAR/g" ../ratings
 sed -i .bak "s/through [0-9]*\\/[0-9]*\\/[0-9]*/through $MONTH\\/$DAY\\/$YEAR/g" ../win_trees
-sed -i .bak "s/through [0-9]*\\/[0-9]*\\/[0-9]*/through $MONTH\\/$DAY\\/$YEAR/g" ../ranking_analysis
 
 echo "Uploading local changes to AWS"
 aws s3 cp --content-type 'text/html' ../ratings s3://www.markmoog.com/ratings
 aws s3 cp --content-type 'text/html' ../win_trees s3://www.markmoog.com/win_trees
-aws s3 cp --content-type 'text/html' ../ranking_analysis s3://www.markmoog.com/ranking_analysis
 aws s3 cp ../data/ratings/ratings_2018.csv s3://www.markmoog.com/data/ratings/ratings_2018.csv
 aws s3 cp ../data/win_trees/edges2018.json s3://www.markmoog.com/data/win_trees/edges2018.json
 aws s3 cp ../data/ranking_analysis/ranking_analysis.json s3://www.markmoog.com/data/ranking_analysis/ranking_analysis.json
@@ -46,5 +44,3 @@ echo "Cleaning up"
 rm output.csv
 mv ../ratings.bak ./backup/ratings
 mv ../win_trees.bak ./backup/win_trees
-mv ../ranking_analysis.bak ./backup/ranking_analysis
-
