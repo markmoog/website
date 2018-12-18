@@ -5,20 +5,15 @@
    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
    xmlns:svg="http://www.w3.org/2000/svg"
    xmlns="http://www.w3.org/2000/svg"
-   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
-   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   height="130px"
-   cursor="crosshair"
-   id="svg_document"
-   width="260px"
+   id="svg8"
    version="1.1"
-   preserveAspectRatio="xMidYMid meet"
-   viewBox="0 0 260 130"
-   sodipodi:docname="logo.svg"
-   style="zoom: 2;"
-   inkscape:version="0.92.2 (5c3e80d, 2017-08-06)">
+   viewBox="0 0 264.58333 264.58334"
+   height="1000"
+   width="1000">
+  <defs
+     id="defs2" />
   <metadata
-     id="metadata4580">
+     id="metadata5">
     <rdf:RDF>
       <cc:Work
          rdf:about="">
@@ -29,85 +24,51 @@
       </cc:Work>
     </rdf:RDF>
   </metadata>
-  <defs
-     id="defs4578" />
-  <sodipodi:namedview
-     pagecolor="#ffffff"
-     bordercolor="#666666"
-     borderopacity="1"
-     objecttolerance="10"
-     gridtolerance="10"
-     guidetolerance="10"
-     inkscape:pageopacity="0"
-     inkscape:pageshadow="2"
-     inkscape:window-width="1076"
-     inkscape:window-height="814"
-     id="namedview4576"
-     showgrid="true"
-     showguides="false"
-     inkscape:snap-grids="true"
-     inkscape:snap-to-guides="true"
-     inkscape:snap-page="false"
-     inkscape:snap-bbox="false"
-     inkscape:bbox-paths="true"
-     inkscape:pagecheckerboard="true"
-     borderlayer="true"
-     inkscape:zoom="2.1570171"
-     inkscape:cx="103.77903"
-     inkscape:cy="71.81105"
-     inkscape:window-x="338"
-     inkscape:window-y="59"
-     inkscape:window-maximized="0"
-     inkscape:current-layer="svg_document">
-    <sodipodi:guide
-       position="0,0"
-       orientation="0,260"
-       id="guide4582"
-       inkscape:locked="false" />
-    <sodipodi:guide
-       position="260,0"
-       orientation="-130,0"
-       id="guide4584"
-       inkscape:locked="false" />
-    <sodipodi:guide
-       position="260,130"
-       orientation="0,-260"
-       id="guide4586"
-       inkscape:locked="false" />
-    <sodipodi:guide
-       position="0,130"
-       orientation="130,0"
-       id="guide4588"
-       inkscape:locked="false" />
-  </sodipodi:namedview>
   <g
-     id="main_group" />
-  <text
-     style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:173.33332825px;font-family:Helvetica;-inkscape-font-specification:'Helvetica, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff;stroke:none;stroke-width:10px;text-rendering:geometricPrecision"
-     id="text1"
-     x="75.5"
-     font-weight="lighter"
-     font-size="180px"
-     y="129">M</text>
-  <rect
-     x="153"
-     height="15"
-     y="83"
-     id="rect3"
-     width="100"
-     style="fill:#ffffff;stroke:#000000;stroke-width:0px" />
-  <rect
-     x="153"
-     height="15"
-     y="53"
-     id="rect2"
-     width="60"
-     style="fill:#ffffff;stroke:#000000;stroke-width:0px" />
-  <rect
-     x="153"
-     height="15"
-     y="113"
-     id="rect4"
-     width="60"
-     style="fill:#ffffff;stroke:#000000;stroke-width:0px" />
+     style="display:inline"
+     transform="translate(0,-32.41665)"
+     id="layer1">
+    <rect
+       y="100.05302"
+       x="0.16762927"
+       height="129.31058"
+       width="39.352242"
+       id="rect831"
+       style="fill:#000000;fill-rule:evenodd;stroke:#000000;stroke-width:0.33525854px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+    <rect
+       style="fill:#000000;fill-rule:evenodd;stroke:#000000;stroke-width:0.27106699px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       id="rect842"
+       width="39.416431"
+       height="84.395599"
+       x="45.1147"
+       y="145.00008" />
+    <rect
+       y="100.05302"
+       x="90.125961"
+       height="129.31058"
+       width="39.352242"
+       id="rect853"
+       style="fill:#000000;fill-rule:evenodd;stroke:#000000;stroke-width:0.33525854px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+    <rect
+       style="fill:#000000;fill-rule:evenodd;stroke:#000000;stroke-width:0.27106699px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       id="rect864"
+       width="84.395599"
+       height="39.416431"
+       x="135.07304"
+       y="189.97926" />
+    <rect
+       y="145.0322"
+       x="135.10513"
+       height="39.352242"
+       width="129.31058"
+       id="rect875"
+       style="fill:#000000;fill-rule:evenodd;stroke:#000000;stroke-width:0.33525854px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+    <rect
+       style="fill:#000000;fill-rule:evenodd;stroke:#000000;stroke-width:0.27106699px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       id="rect886"
+       width="84.395599"
+       height="39.416431"
+       x="135.6022"
+       y="100.02095" />
+  </g>
 </svg>
