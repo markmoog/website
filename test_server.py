@@ -16,16 +16,26 @@ class InlineHandler(SimpleHTTPRequestHandler):
             # self.send_header('Content-Disposition', 'inline')
         super().end_headers()
 
+
 # The following is based on the standard library implementation
 # https://github.com/python/cpython/blob/3.6/Lib/http/server.py#L1195
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
-    parser.add_argument('--bind', '-b', default='', metavar='ADDRESS',
-                        help='Specify alternate bind address '
-                             '[default: all interfaces]')
-    parser.add_argument('port', action='store',
-                        default=8000, type=int,
-                        nargs='?',
-                        help='Specify alternate port [default: 8000]')
+    parser.add_argument(
+        '--bind',
+        '-b',
+        default='',
+        metavar='ADDRESS',
+        help='Specify alternate bind address [default: all interfaces]'
+    )
+    parser.add_argument(
+        '--port',
+        '-p',
+        action='store',
+        default=8000,
+        type=int,
+        nargs='?',
+        help='Specify alternate port [default: 8000]'
+    )
     args = parser.parse_args()
     test(InlineHandler, port=args.port, bind=args.bind)

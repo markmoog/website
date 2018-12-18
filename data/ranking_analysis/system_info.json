@@ -74,6 +74,11 @@
     "http://dcindex-choop.blogspot.com/search/label/DCI%2-1Rank",
     4
   ],
+  "DDB":[
+    "Deep Dribble",
+    " http://brandonharris.io/ncaa/rankings.html",
+    17
+  ],
   "DES": [
     "DeSimone",
     "http://www.mikedesimone.com/top25b.htm",
@@ -129,6 +134,11 @@
     "http://haslametrics.com",
     4
   ],
+  "JJK": [
+    "Jelly Juke",
+    "http://hoopshd.com/nitty-gritty-rankings",
+    13
+  ],
   "JNG": [
     "Joby Nitty Gritty",
     "http://hoopshd.com/nitty-gritty-rankings",
@@ -148,6 +158,11 @@
     "Krach",
     "http://sports.vaporia.com/collegebasketballkrach.html",
     9
+  ],
+  "LAB": [
+    "Albert LMLRMC",
+    "http://bracketology.engr.wisc.edu",
+    14
   ],
   "LMC": [
     "LRMC",
@@ -259,10 +274,20 @@
     "http://www.sports-ratings.com/basketball/",
     12
   ],
+  "SPW": [
+    "Snapper's World",
+    " http://snappersworld.com/index.php",
+    17
+  ],
   "STH": [
     "Sport Theory",
     "http://sportheory.com",
     5
+  ],
+  "STM": [
+    "Sportemind",
+    "https://sportemind.wixsite.com/collegebasketball/dominance-rankings",
+    14
   ],
   "TPR": [
     "The Power Rank",
