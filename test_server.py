@@ -9,9 +9,11 @@ class InlineHandler(SimpleHTTPRequestHandler):
     def end_headers(self):
         mimetype = self.guess_type(self.path)
         is_file = not self.path.endswith('/')
+        # is_file = True
         # This part adds extra headers for some file types.
         print(mimetype)
         if is_file and mimetype in ['text/plain', 'application/octet-stream']:
+            print('changing mime to html')
             self.send_header('Content-Type', 'text/html')
             # self.send_header('Content-Disposition', 'inline')
         super().end_headers()

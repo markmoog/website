@@ -3,8 +3,18 @@ var teams = []
 var highlight_teams = []
 
 $( function() {
-    set_year(2018)
-    var teams_path = '/data/win_trees/teams.json'
+    set_year(2019)
+})
+
+function setup_autocomplete(teams) {
+    $( "#team_selection" ).autocomplete({
+        source: teams
+    });
+};
+
+function set_year(year){
+    document.getElementById("yearSelector").innerHTML=year
+    var teams_path = '/data/win_trees/teams'+year+'.json'
 
     var xobj = new XMLHttpRequest();
     xobj.overrideMimeType("application/json");
@@ -16,16 +26,6 @@ $( function() {
         }
     };
     xobj.send(null);
-})
-
-function setup_autocomplete(teams) {
-    $( "#team_selection" ).autocomplete({
-        source: teams
-    });
-};
-
-function set_year(year){
-    document.getElementById("yearSelector").innerHTML=year
 }
 
 function load_edges() {

@@ -12,7 +12,7 @@
         <!-- Navbar -->
         <nav class="navbar bg-dark navbar-expand-sm navbar-dark">
             <div class="container">
-                <a class="navbar-brand" href="/"><img src="/img/logo.svg" width="60" height="30" alt=""></a>
+                <!-- <a class="navbar-brand" href="/"><img src="/img/logo.svg" width="60" height="30" alt=""></a> -->
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarLinks" aria-controls="navbarLinks" aria-expanded="true" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
                 </button>
@@ -30,21 +30,31 @@
             <section class="jumbotron text-center">
                 <div class="container">
                     <h1 class="jumbotron-heading">College Basketball Ratings</h1>
-                    <p class="text-muted">
-                        Rating methodology can be found <a href="/articles/graph_ratings">here</a>
-                    </p>
                 </div>
             </section>
             <p></p>
             <div class="text-center">
-                <h4>2018-2019 Ratings</h4>
-                <!-- <p class="text-muted"><small>Includes results through 04/02/18</small></p> -->
+                <h4>Ratings</h4>
+                <script>
+                </script>
+                <div class="dropdown">
+                    <button class="btn btn-outline-secondary dropdown-toggle" type="button" id="yearSelector" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">2019</button>
+                    <div class="dropdown-menu" aria-labelledby="yearSelector">
+                        <button onclick="set_year(2017)" class="dropdown-item" type="button">2017</button>
+                        <button onclick="set_year(2018)" class="dropdown-item" type="button">2018</button>
+                        <button onclick="set_year(2019)" class="dropdown-item" type="button">2019</button>
+                    </div>
+                </div>
+                <p class='text-center text-muted'>
+                    <small>The 2019 ratings include games through 12/20/18</small>
+                </p>
             </div>
-            <div class="ratings mx-auto" style="width: 300px;">
+            <hr>
+            <div class="ratings mx-auto" style="width: 350px;">
                 <!-- ratings table goes here -->
                 <script>
                     function create_table(data) {
-                        var table = $('<table class="table table-striped table-hover table-sm"><thead><tr><th></th><th scope="col">School</th><th scope="col" class="text-center">Rating</th></tr></thead></table>')
+                        var table = $('<table class="ratings_table table table-striped table-hover table-sm"><thead><tr><th></th><th scope="col">School</th><th scope="col" class="text-center">Rating</th></tr></thead></table>')
                         var body = $('<tbody></tbody>')
                         $(data).each(function (i, row_data) {
                             var row = $('<tr></tr>')
@@ -59,13 +69,26 @@
                         table.append(body)
                         return table
                     }
+                    year = document.getElementById("yearSelector").innerHTML
                     $.ajax({
                         type: "GET",
-                        url: "/data/ratings/ratings_2019.csv",
+                        url: "/data/ratings/ratings_"+ year + ".csv",
                         success: function (data) {
                             $('.ratings').append(create_table(Papa.parse(data).data))
                         }
                     })
+
+                    function set_year(year){
+                        document.getElementById("yearSelector").innerHTML=year
+                        $('.ratings_table').remove()
+                        $.ajax({
+                            type: "GET",
+                            url: "/data/ratings/ratings_" + year + ".csv",
+                            success: function (data) {
+                                $('.ratings').append(create_table(Papa.parse(data).data))
+                            }
+                        })
+                    }
                 </script>
             </div>
         </div>

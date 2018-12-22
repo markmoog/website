@@ -11,7 +11,7 @@
        <!-- Navbar -->
         <nav class="navbar bg-dark navbar-expand-sm navbar-dark">
             <div class="container">
-                <a class="navbar-brand" href="/"><img src="/img/logo.svg" width="60" height="30" alt=""></a>
+                <!-- <a class="navbar-brand" href="/"><img src="/img/logo.svg" width="60" height="30" alt=""></a> -->
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarLinks" aria-controls="navbarLinks" aria-expanded="true" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
                 </button>
